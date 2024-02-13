@@ -12,6 +12,8 @@ function App() {
       {/* Tyrell was here */}
       {/* Feature Branch Shaka */}
       {/* Rico Suave */}
+      {/* Jackie was good */}
+
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
