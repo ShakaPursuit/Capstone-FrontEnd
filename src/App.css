@@ -1,42 +1,182 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.frame {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  margin:0;
+
+  
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Bottom Logo */
+img.quote{
+  width:175px;
+  height: 100px; 
+margin-left:108px
+  
+   
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+.frame .div {
+  background-color: #ffffff;
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+  width: 430px;
+ 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.frame .toggle-on-instance {
+  height: 19px !important;
+  left: 293px !important;
+  position: absolute !important;
+  top: 486px !important;
+  width: 30px !important;
 }
 
-.card {
-  padding: 2em;
+
+
+
+
+
+/* Top Logo */
+
+.frame .updated-logo {
+  height: 204px;
+  left: 75px;
+  object-fit: cover;
+  position: absolute;
+  top: 43px;
+  width: 251px;
 }
 
-.read-the-docs {
-  color: #888;
+.frame .text-wrapper-2 {
+  color: #000000;
+  font-family: var(--regular-14-font-family);
+  font-size: var(--regular-14-font-size);
+  font-style: var(--regular-14-font-style);
+  font-weight: var(--regular-14-font-weight);
+  left: 104px;
+  letter-spacing: var(--regular-14-letter-spacing);
+  line-height: var(--regular-14-line-height);
+  position: absolute;
+  top: 331px;
+  width: 158px;
+  margin-left: 15px;
+ border-top: none;
+ border-left: none;
+ border-right:none;
+  
+  ;
+}
+.frame .text-wrapper-2:hover{
+  background-color: greenyellow;
+}
+
+/*  */
+
+.frame .text-wrapper-3 {
+  color: #000000;
+  font-family: var(--regular-14-font-family);
+  font-size: var(--regular-14-font-size);
+  font-style: var(--regular-14-font-style);
+  font-weight: var(--regular-14-font-weight);
+  left: 107px;
+  letter-spacing: var(--regular-14-letter-spacing);
+  line-height: var(--regular-14-line-height);
+  position: absolute;
+  top: 408px;
+  width: 158px;
+  margin-left:15px;
+  border-top: none;
+ border-left: none;
+ border-right:none;
+}
+.frame .text-wrapper-3:hover {
+  background-color: aqua;
+}
+.frame .text-wrapper-4:hover {
+  background-color: rgb(238, 0, 255);
+}
+
+.frame .overlap {
+  height: 69px;
+  left: 70px;
+  top: 574px;
+  width: 308px;
+  margin-top:480px ;
+  margin-left:160px
+}
+
+
+
+.frame .text-wrapper-4 {
+  color: #000000;
+  font-family: var(--regular-14-font-family);
+  font-size: var(--regular-14-font-size);
+  font-style: var(--regular-14-font-style);
+  font-weight: var(--regular-14-font-weight);
+  left: 107px;
+  letter-spacing: var(--regular-14-letter-spacing);
+  line-height: var(--regular-14-line-height);
+  position: absolute;
+  top: 408px;
+  width: 158px;
+  margin-left:15px;
+  border-top: none;
+ border-left: none;
+ border-right:none;
+ margin-top:75px
+}
+.create{
+ 
+  margin-left: 110px;
+  background-color: rgb(18, 180, 180);
+}
+.create:hover{
+  background-color: rgb(75, 184, 86);
+}
+
+.frame .overlap-2 {
+  height: 69px;
+  left: 126px;
+  position: absolute;
+  top: 745px;
+  width: 325px;
+ 
+}
+.sign-up{
+  margin-bottom:50px;
+  margin-left:125px;
+  width:150px;
+  background-color: rgb(34, 129, 202)
+  ;
+  
+
+}
+
+/*  */
+
+.frame .text-wrapper-5 {
+  -webkit-text-stroke: 1px #000000;
+  color: #000000;
+  font-family: var(--regular-28-font-family);
+  font-size: var(--regular-28-font-size);
+  font-style: var(--regular-28-font-style);
+  font-weight: var(--regular-28-font-weight);
+  left: 59px;
+  letter-spacing: var(--regular-28-letter-spacing);
+  line-height: var(--regular-28-line-height);
+  position: absolute;
+  top: 17px;
+  width: 266px;
+}
+.login{
+  background-color: rgb(98, 231, 171);
 }
