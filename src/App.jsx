@@ -25,8 +25,8 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/settings" element={<ProfileSettings/>}/>
-          <Route path="hivechat" element={<HiveChat/>}/>
-          <Route path="accountsettings" element={<AccountSettings/>}/>
+          <Route path="/hivechat" element={<HiveChat/>}/>
+          <Route path="/accountsettings" element={<AccountSettings/>}/>
         </Routes>
       </Router>
     </>

@@ -7,6 +7,7 @@
   width: 100%;
   overflow: hidden;
   margin:0;
+  margin-right:01px
  
 
   
@@ -31,6 +32,7 @@ margin-left:108px
   overflow: hidden;
   position: relative;
   width: 430px;
+
  
 }
 .frame .div2 {
@@ -39,6 +41,8 @@ margin-left:108px
   overflow: hidden;
   position: relative;
   width: 430px;
+  /* width:100%; */
+  
  
 }
 
@@ -146,7 +150,10 @@ margin-left:108px
 }
 .create{
  
-  margin-left: 110px;
+  margin-left: 125px;
+ 
+  margin-top:100px;
+
   background-color: rgb(18, 180, 180);
 }
 .create:hover{
@@ -201,13 +208,13 @@ margin-right: 200px;
   font-size: var(--regular-14-font-size);
   font-style: var(--regular-14-font-style);
   font-weight: var(--regular-14-font-weight);
-  left: 107px;
+
   letter-spacing: var(--regular-14-letter-spacing);
   line-height: var(--regular-14-line-height);
   position: absolute;
   top: 430px;
   width: 158px;
-  margin-left:-20px;
+  /* margin-right:120px; */
   border-top: none;
  border-left: none;
  border-right:none;
@@ -526,17 +533,18 @@ form#form,form#form-2{
 }
 
 #head{
-  margin: 0;
-  width: 370px;
+  /* margin: 0; */
+  width: 390px;
   background-color:white;
   height: 125px;
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
   border:2px solid black;
-  padding-left: 20px;
+ 
   text-align: center;
 font-weight: 500;
 font-size: smaller;
 color: aqua;
+
 }
 
 #delete{

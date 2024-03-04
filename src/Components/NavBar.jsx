@@ -13,7 +13,7 @@ const NavBar = () => {
     maxWidth: "70%",
     border:"2px solid white",
     radius:"15px",
-   color:'gray',
+ 
    
    
   };

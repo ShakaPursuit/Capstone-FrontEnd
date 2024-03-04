@@ -6,7 +6,11 @@ import quote from "../assets/quote.png"
 import "../App.css";
 
  const Login = () => {
-  return (
+  return (<>
+  <div>
+    <div id="container">
+
+
     <div className="frame">
       <div className="div">
         <img className="updated-logo"src={logo}/>
@@ -28,6 +32,9 @@ import "../App.css";
       <img className="quote" src={quote}/>
       </div>
     </div>
+  </div>
+    </div>
+  </>
   );
 };
 

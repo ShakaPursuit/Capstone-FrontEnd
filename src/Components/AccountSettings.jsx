@@ -1,12 +1,15 @@
 import React from 'react';
 import logo from "../assets/GH.png"
 import "../App.css";
+import NavBar from './NavBar';
 
 const AccountSettings = () => {
     return (
         <>
-        <header id="head"><h1>Account Settings</h1></header>
             <div className="frame">
+                <div className='div'>
+
+        <header id='head'><h1>Account Settings</h1></header>
               
       <div >
         <button id='delete-account'>delete</button>
@@ -32,6 +35,8 @@ const AccountSettings = () => {
    
      </div>
     </div>
+    <NavBar/>
+</div>
         </>
       
             
