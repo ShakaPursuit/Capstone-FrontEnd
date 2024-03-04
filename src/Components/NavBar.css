@@ -1,9 +1,11 @@
 nav{
-    background-color: darkgray;
+    background-color:rgba(42, 44, 50, 0.472);
     color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 100px;
     display: flex;
     justify-content: space-around;
+    border-radius: 15px;
 }

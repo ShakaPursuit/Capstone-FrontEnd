@@ -4,9 +4,12 @@ import "../App.css";
 
 const AccountSettings = () => {
     return (
-      
+        <>
+        <header id="head"><h1>Account Settings</h1></header>
             <div className="frame">
+              
       <div >
+        <button id='delete-account'>delete</button>
         <input className="two" type="text" placeholder="Enter UserName"/>
       
         {/* <img  className="toggle-on-instance" src={toggle}/> */}
@@ -16,10 +19,11 @@ const AccountSettings = () => {
         <input className="four" type="text" placeholder="Enter Email"/>
         {/* <div className="overlap">
 
-        </div> */}
-        <img id="logo"src={logo}/>
+</div> */}
       </div>
-         {/* <button className='create'>CREATE ACCOUNT</button> */}
+<img id="logo"src={logo}/>
+         <button id='delete' >UPDATE
+      </button>
          
        
        
@@ -28,6 +32,8 @@ const AccountSettings = () => {
    
      </div>
     </div>
+        </>
+      
             
      
         // </div>

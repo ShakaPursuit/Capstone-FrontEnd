@@ -5,6 +5,7 @@ import { useState ,useEffect} from "react";
 import "../App.css"
 import  Progress  from "../Components/ProgressBar";
 import  Progress2  from "../Components/ProgressBar2";
+import NavBar from "../Components/NavBar";
 
 const user1 = {
               id: '123456789',
@@ -91,13 +92,14 @@ const user1 = {
                 };
               
                 return (
+                    
                   <>
                     <div className="chat-background">
                       <div id="container">
                         <div className="frame">
                           <div className="div2">
                             <header id="chat" className="header">
-                              {/* <h1>{user2.name}</h1> */}
+                              <h1>{user2.name}</h1>
                             </header>
                             <Progress id='user1-goal'/>
                            
@@ -133,12 +135,13 @@ const user1 = {
                                 }}
                                 />
                             </form>
-                    <footer className="text-wrapper-10">
+                            <NavBar/>
+                    {/* <footer className="text-wrapper-10">
                         <div>
                             <img id="button1" src={button1}/>
 
                         </div>
-                    </footer>
+                    </footer> */}
                           </div>
                         </div>
                       </div>

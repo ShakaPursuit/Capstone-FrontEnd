@@ -10,10 +10,16 @@ import "./Navbar.css";
 const NavBar = () => {
   const logoStyle = {
     height: "auto",
-    maxWidth: "25%",
+    maxWidth: "70%",
+    border:"2px solid white",
+    radius:"15px",
+   color:'gray',
+   
+   
   };
   return (
     <nav className="nav">
+      
       <Link to="/">
         <img style={logoStyle} src={GoalHive} alt="" />
       </Link>
@@ -23,7 +29,7 @@ const NavBar = () => {
       <Link to="/goals">
         <img style={logoStyle} src={CreateGoal} alt="" />
       </Link>
-      <Link to="/chat">
+      <Link to="/hivechat">
         <img style={logoStyle} src={HiveChat} alt="" />
       </Link>
       <Link to="/profile">

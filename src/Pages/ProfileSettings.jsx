@@ -1,6 +1,8 @@
 import React from "react";
 import "../Profile.css"
 import background from "../assets/pf.png"
+import { Link } from "react-router-dom";
+import NavBar from "../Components/NavBar";
 const ProfileSettings=()=>{
 
 
@@ -10,7 +12,8 @@ const ProfileSettings=()=>{
 return(<>
 <div className="frame" >
     <div className="div" id="p-Settings">
-<h1 className="profile-header">Profile Settings page</h1>
+<h1 className="profile-header">Profile Settings 
+<Link id="ac" to="/accountsettings"><p id="inner"> 📲Account Settings</p></Link></h1>
 <label htmlFor="interest">Choose Interest 
   <select value="interest" id="interest">
     <option value="Art">Art</option>
@@ -60,7 +63,7 @@ return(<>
     <br></br>
  
         <h3 className="text-wrapper-5">About Me</h3>
-        <img id="bgi"src={background}/>
+        {/* <img id="bgi"src={background}/> */}
         
     </div>
     <label>
@@ -70,9 +73,10 @@ return(<>
 
     </textarea>
     </label>
-    <button id="submit" className="text-wrapper-7">SUBMIT</button>
+    {/* <button id="submit" className="text-wrapper-7">SUBMIT</button> */}
 
 </div>
+<NavBar/>
 
 
 

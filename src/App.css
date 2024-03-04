@@ -239,6 +239,7 @@ margin-right: 200px;
 }
 header#chat.header{
   background-image:url("./assets/quote.png") ;
+  /* background-color: rgb(34, 32, 32); */
 background-size: 300px;
 /* width:100%; */
 /* opacity: 30%; */
@@ -246,6 +247,7 @@ margin-bottom: 20px;
 height: 100px;
 background-repeat: none;
 background-position:top;
+/* background-color: darkgray; */
 /* background-position: center; */
 /* background-position: left; */
 
@@ -465,7 +467,7 @@ form#form,form#form-2{
   font-size: var(--regular-14-font-size);
   font-style: var(--regular-14-font-style);
   font-weight: var(--regular-14-font-weight);
-  left: 104px;
+  left: 90px;
   letter-spacing: var(--regular-14-letter-spacing);
   line-height: var(--regular-14-line-height);
   position: absolute;
@@ -487,7 +489,7 @@ form#form,form#form-2{
   font-size: var(--regular-14-font-size);
   font-style: var(--regular-14-font-style);
   font-weight: var(--regular-14-font-weight);
-  left: 107px;
+  left: 90px;
   letter-spacing: var(--regular-14-letter-spacing);
   line-height: var(--regular-14-line-height);
   position: absolute;
@@ -505,7 +507,7 @@ form#form,form#form-2{
   font-size: var(--regular-14-font-size);
   font-style: var(--regular-14-font-style);
   font-weight: var(--regular-14-font-weight);
-  left: 107px;
+  left: 90px;
   letter-spacing: var(--regular-14-letter-spacing);
   line-height: var(--regular-14-line-height);
   position: absolute;
@@ -520,5 +522,43 @@ form#form,form#form-2{
 #logo{
   width:200px;
   margin-top: 400px;
-  margin-left: 100px;
+
+}
+
+#head{
+  margin: 0;
+  width: 370px;
+  background-color:white;
+  height: 125px;
+  margin-bottom: 70px;
+  border:2px solid black;
+  padding-left: 20px;
+  text-align: center;
+font-weight: 500;
+font-size: smaller;
+color: aqua;
+}
+
+#delete{
+  height: 100px;
+  width: 100px;
+ 
+  margin-right:600px;
+  border:2px solid
+
+}
+#delete-account{
+  height: 50px;
+  width: 100px;
+  margin-top: 300px;
+  border:2px solid red
+ 
+
+}
+#ac{
+  color: red;
+  
+}
+#inner{
+  font-size: x-small;
 }
