@@ -435,3 +435,90 @@ div.chat-background{background-color: rgb(0, 0, 255);}
 form#form,form#form-2{
   background-color: rgba(190, 224, 200, 0.031);
 }
+
+
+#text-wrapper-5-ac {
+  -webkit-text-stroke: 1px #000000;
+  color: #000000;
+  font-family: var(--regular-28-font-family);
+  font-size: var(--regular-28-font-size);
+  font-style: var(--regular-28-font-style);
+  font-weight: var(--regular-28-font-weight);
+  left: 59px;
+  letter-spacing: var(--regular-28-letter-spacing);
+  line-height: var(--regular-28-line-height);
+  /* position: absolute; */
+  /* top: 17px;*/
+  height: 200px;
+  width: 266px; 
+  margin-left: 60px;
+ 
+}
+
+
+.frame #id{
+  background-color: red;
+}
+.frame .two{
+  color: #000000;
+  font-family: var(--regular-14-font-family);
+  font-size: var(--regular-14-font-size);
+  font-style: var(--regular-14-font-style);
+  font-weight: var(--regular-14-font-weight);
+  left: 104px;
+  letter-spacing: var(--regular-14-letter-spacing);
+  line-height: var(--regular-14-line-height);
+  position: absolute;
+  top: 231px;
+  width: 158px;
+  margin-left: 15px;
+ border-top: none;
+ border-left: none;
+ border-right:none;
+  
+  ;
+}
+
+/*  */
+
+.frame .three {
+  color: #000000;
+  font-family: var(--regular-14-font-family);
+  font-size: var(--regular-14-font-size);
+  font-style: var(--regular-14-font-style);
+  font-weight: var(--regular-14-font-weight);
+  left: 107px;
+  letter-spacing: var(--regular-14-letter-spacing);
+  line-height: var(--regular-14-line-height);
+  position: absolute;
+  top: 308px;
+  width: 158px;
+  margin-left:15px;
+  border-top: none;
+ border-left: none;
+ border-right:none;
+}
+
+.frame .four {
+  color: #000000;
+  font-family: var(--regular-14-font-family);
+  font-size: var(--regular-14-font-size);
+  font-style: var(--regular-14-font-style);
+  font-weight: var(--regular-14-font-weight);
+  left: 107px;
+  letter-spacing: var(--regular-14-letter-spacing);
+  line-height: var(--regular-14-line-height);
+  position: absolute;
+  top: 308px;
+  width: 158px;
+  margin-left:15px;
+  border-top: none;
+ border-left: none;
+ border-right:none;
+ margin-top:75px
+}
+#logo{
+  width:200px;
+  margin-top: 400px;
+  margin-left: 100px;
+}

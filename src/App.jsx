@@ -10,6 +10,7 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import ProfileSettings from "./Pages/ProfileSettings";
 import HiveChat from "./Pages/HiveChat";
+import AccountSettings from "./Components/AccountSettings";
 import "./App.css";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/settings" element={<ProfileSettings/>}/>
           <Route path="hivechat" element={<HiveChat/>}/>
+          <Route path="accountsettings" element={<AccountSettings/>}/>
         </Routes>
       </Router>
     </>
