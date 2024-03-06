@@ -528,7 +528,7 @@ form#form,form#form-2{
 }
 #logo{
   width:200px;
-  margin-top: 400px;
+  margin-top: 300px;
 
 }
 
@@ -551,7 +551,8 @@ color: aqua;
   height: 100px;
   width: 100px;
  
-  margin-right:600px;
+ 
+
   border:2px solid
 
 }
@@ -570,3 +571,5 @@ color: aqua;
 #inner{
   font-size: x-small;
 }
+#update{height: 20px;
+width:150px}

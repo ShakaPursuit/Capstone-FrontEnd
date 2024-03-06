@@ -1,6 +1,8 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import "./App.css";
+
 
 
 //Pages
@@ -15,6 +17,8 @@ import AccountSettings from "./Components/AccountSettings";
 import "./App.css";
 
 function App() {
+  const [user, setUser] = useState(null)
+  const [token, setToken] = useState(null)
   return (
     <>
       <Router>
@@ -22,7 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<UserProfile />} />
-          <Route path="/login" element={<Login/>}/>
+          <Route path="/login" element={<Login setUser={setUser} setToken={setToken}/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/settings" element={<ProfileSettings/>}/>
           <Route path="/hivechat" element={<HiveChat/>}/>

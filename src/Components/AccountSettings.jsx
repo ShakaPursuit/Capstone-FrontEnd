@@ -9,38 +9,37 @@ const AccountSettings = () => {
             <div className="frame">
                 <div className='div'>
 
-        <header id='head'><h1>Account Settings</h1></header>
-              
-      <div >
-        <button id='delete-account'>delete</button>
-        <input className="two" type="text" placeholder="Enter UserName"/>
-      
-        {/* <img  className="toggle-on-instance" src={toggle}/> */}
-        
-        <input className="three" type="text" placeholder="Enter Password"/>
-        {/* <div className="overlap"> */}
-        <input className="four" type="text" placeholder="Enter Email"/>
-        {/* <div className="overlap">
+                    <header id='head'><h1>Account Settings</h1></header>
 
-</div> */}
-      </div>
-<img id="logo"src={logo}/>
-         <button id='delete' >UPDATE
-      </button>
-         
-       
-       
-     <div>
+                    <button id='update' >Update Settings📲</button>
+                    <div >
+                        <button id='delete-account'>🗑️ Delete Account</button>
 
-   
-     </div>
-    </div>
-    <NavBar/>
-</div>
+                        <input className="two" type="text" placeholder="Enter UserName" />
+
+                      
+
+                        <input className="three" type="text" placeholder="Enter Password" />
+                   
+                        <input className="four" type="text" placeholder="Enter Email" />
+                       
+
+
+                        <img id="logo" src={logo} />
+                    </div>
+
+
+                    <div>
+
+
+                    </div>
+                </div>
+                <NavBar />
+            </div>
         </>
-      
-            
-     
+
+
+
         // </div>
     );
 };
