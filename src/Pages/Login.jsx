@@ -8,7 +8,7 @@ import "../App.css";
  const Login = () => {
   return (
     <div className="frame">
-      <div className="div">
+      <div className="div" >
         <img className="updated-logo"src={logo}/>
         <input className="text-wrapper-2" type="text" placeholder="UserName"/>
       
