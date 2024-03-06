@@ -22,9 +22,12 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home user={user} token={token} />} />
           <Route path="/profile" element={<UserProfile />} />
-          <Route path="/login" element={<Login setUser={setUser} setToken={setToken} />} />
+          <Route
+            path="/login"
+            element={<Login setUser={setUser} setToken={setToken} />}
+          />
           <Route
             path="/signup"
             element={<Signup setUser={setUser} setToken={setToken} />}
