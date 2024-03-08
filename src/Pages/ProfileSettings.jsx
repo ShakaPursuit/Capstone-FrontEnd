@@ -73,7 +73,7 @@ return(<>
     </textarea>
     </label>
     </div>
-    {/* <button id="submit" className="text-wrapper-7">SUBMIT</button> */}
+    <button id="submit" className="text-wrapper-20">SUBMIT</button>
 
 <NavBar/>
 </div>

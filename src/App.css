@@ -573,3 +573,25 @@ color: aqua;
 }
 #update{height: 20px;
 width:150px}
+
+.frame .text-wrapper-20 {
+  color: #000000;
+  font-family: var(--regular-14-font-family);
+  /* font-size: var(--regular-14-font-size);
+  font-style: var(--regular-14-font-style);
+  font-weight: var(--regular-14-font-weight); */
+  left: 100px;
+  letter-spacing: var(--regular-14-letter-spacing);
+  line-height: var(--regular-14-line-height);
+  position: absolute;
+  top: 650px;
+  width: 158px;
+  font-weight: bolder;
+  
+  margin-left:10px;
+  border-top: none;
+ border-left: none;
+ border-right:none;
+ border-radius: 15px;
+ 
+}

@@ -4,6 +4,7 @@ import logo from "../assets/GH.png";
 import quote from "../assets/quote.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "../App.css";
 
@@ -86,7 +87,7 @@ const Login = ({ setUser, setToken }) => {
                 <img className="toggle-on-instance" src={toggle} />
                 <input
                   className="text-wrapper-3"
-                  type="text"
+                  type="password"
                   onChange={handlePass}
                   placeholder="Password"
                 />
@@ -97,7 +98,9 @@ const Login = ({ setUser, setToken }) => {
                 </div>
               </form>
               <div classname="center">
+               <Link to="/signup">
                 <button className="sign-up">Sign-Up</button>
+               </Link>
               </div>
               <img className="quote" src={quote} />
             </div>
