@@ -11,7 +11,7 @@ const NavBar = () => {
   const logoStyle = {
     height: "auto",
     maxWidth: "70%",
-    border:"2px solid white",
+    border:"1px solid black",
     radius:"15px",
  
    
@@ -21,19 +21,19 @@ const NavBar = () => {
     <nav className="nav">
       
       <Link to="/">
-        <img style={logoStyle} src={GoalHive} alt="" />
+        <img id="goalhive-icon"style={logoStyle} src={GoalHive} alt="" />
       </Link>
       <Link to="/findbuddy">
-        <img style={logoStyle} src={Buddies} alt="" />
+        <img id='buddies-logo'style={logoStyle} src={Buddies} alt="" />
       </Link>
       <Link to="/goals">
-        <img style={logoStyle} src={CreateGoal} alt="" />
+        <img id='createGoal-icon'style={logoStyle} src={CreateGoal} alt="" />
       </Link>
       <Link to="/hivechat">
-        <img style={logoStyle} src={HiveChat} alt="" />
+        <img id='hivechat-icon'style={logoStyle} src={HiveChat} alt="" />
       </Link>
       <Link to="/profile">
-        <img style={logoStyle} src={ProfileIcon} alt="" />
+        <img id="profile-icon"style={logoStyle} src={ProfileIcon} alt="" />
       </Link>
     </nav>
   );
