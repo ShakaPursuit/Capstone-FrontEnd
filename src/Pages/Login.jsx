@@ -1,10 +1,10 @@
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import React from "react";
 import toggle from "../assets/toggle.png";
 import logo from "../assets/GH.png";
 import quote from "../assets/quote.png";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { Link } from "react-router-dom";
 
 import "../App.css";
 
@@ -69,7 +69,7 @@ const Login = ({ setUser, setToken }) => {
   };
         
 
- const Login = () => {
+
  
   return (
     <>
@@ -111,6 +111,6 @@ const Login = ({ setUser, setToken }) => {
     </>
   );
 };
-}
+
 
 export default Login;

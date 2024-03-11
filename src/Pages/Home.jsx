@@ -4,6 +4,7 @@ import NavBar from "../Components/NavBar";
 
 const Home = () => {
   const API = import.meta.env.VITE_API_KEY;
+  const navigate = useNavigate();
 
   const [users, setUsers] = useState([])
 
@@ -24,8 +25,7 @@ const Home = () => {
     fetchData()
   }, [])
 
-const Home = ({ user, token }) => {
-  const navigate = useNavigate();
+
 
   // useEffect(() => {
   //   if (!user && !token) {
@@ -98,6 +98,6 @@ const Home = ({ user, token }) => {
     </>
   );
 };
-}
+
 
 export default Home;
