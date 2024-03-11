@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 import "../App.css";
 
+
 const Login = ({ setUser, setToken }) => {
   const API = import.meta.env.VITE_API_KEY;
   const navigate = useNavigate();
@@ -54,6 +55,16 @@ const Login = ({ setUser, setToken }) => {
         setUser(user);
         setToken(token);
         
+
+ const Login = () => {
+  return (
+    <div className="frame">
+      <div className="div" >
+        <img className="updated-logo"src={logo}/>
+        <input className="text-wrapper-2" type="text" placeholder="UserName"/>
+      
+        <img  className="toggle-on-instance" src={toggle}/>
+
         
         setFormData({
           username: "",

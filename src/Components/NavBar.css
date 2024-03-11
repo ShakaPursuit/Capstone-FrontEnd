@@ -1,4 +1,4 @@
-nav{
+.nav{
     background-color:rgba(42, 44, 50, 0.472);
     color: white;
     position: fixed;
@@ -15,4 +15,7 @@ nav{
     nav {
       display: none;
     }
+
+    justify-content: space-around;
+
 }
