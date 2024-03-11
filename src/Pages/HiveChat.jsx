@@ -94,7 +94,7 @@ const user1 = {
                 return (
                     
                   <>
-                    <div className="chat-background">
+                    <div >
                       <div id="container">
                         <div className="frame">
                           <div className="div2">
@@ -138,8 +138,8 @@ const user1 = {
                             <NavBar/>
                     {/* <footer className="text-wrapper-10">
                         <div>
-                            <img id="button1" src={button1}/>
-
+                        <img id="button1" src={button1}/>
+                        
                         </div>
                     </footer> */}
                           </div>

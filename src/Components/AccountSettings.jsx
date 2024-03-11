@@ -1,41 +1,45 @@
 import React from 'react';
 import logo from "../assets/GH.png"
 import "../App.css";
+import NavBar from './NavBar';
 
 const AccountSettings = () => {
     return (
         <>
-        <header id="head"><h1>Account Settings</h1></header>
             <div className="frame">
-              
-      <div >
-        <button id='delete-account'>delete</button>
-        <input className="two" type="text" placeholder="Enter UserName"/>
-      
-        {/* <img  className="toggle-on-instance" src={toggle}/> */}
-        
-        <input className="three" type="text" placeholder="Enter Password"/>
-        {/* <div className="overlap"> */}
-        <input className="four" type="text" placeholder="Enter Email"/>
-        {/* <div className="overlap">
+                <div className='div'>
 
-</div> */}
-      </div>
-<img id="logo"src={logo}/>
-         <button id='delete' >UPDATE
-      </button>
-         
-       
-       
-     <div>
+                    <header id='head'><h1>Account Settings</h1></header>
 
-   
-     </div>
-    </div>
+                    <button id='update' >Update Settings📲</button>
+                    <div >
+                        <button id='delete-account'>🗑️ Delete Account</button>
+
+                        <input className="two" type="text" placeholder="Enter UserName" />
+
+                      
+
+                        <input className="three" type="text" placeholder="Enter Password" />
+                   
+                        <input className="four" type="text" placeholder="Enter Email" />
+                       
+
+
+                        <img id="logo" src={logo} />
+                    </div>
+
+
+                    <div>
+
+
+                    </div>
+                </div>
+                <NavBar />
+            </div>
         </>
-      
-            
-     
+
+
+
         // </div>
     );
 };

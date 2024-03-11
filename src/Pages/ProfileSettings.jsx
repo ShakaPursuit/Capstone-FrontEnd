@@ -11,7 +11,7 @@ const ProfileSettings=()=>{
 
 return(<>
 <div className="frame" >
-    <div className="div" id="p-Settings">
+    <div id="p-Settings">
 <h1 className="profile-header">Profile Settings 
 <Link id="ac" to="/accountsettings"><p id="inner"> 📲Account Settings</p></Link></h1>
 <label htmlFor="interest">Choose Interest 
@@ -65,7 +65,6 @@ return(<>
         <h3 className="text-wrapper-5">About Me</h3>
         {/* <img id="bgi"src={background}/> */}
         
-    </div>
     <label>
 
 
@@ -73,10 +72,11 @@ return(<>
 
     </textarea>
     </label>
-    {/* <button id="submit" className="text-wrapper-7">SUBMIT</button> */}
+    </div>
+    <button id="submit" className="text-wrapper-20">SUBMIT</button>
 
-</div>
 <NavBar/>
+</div>
 
 
 

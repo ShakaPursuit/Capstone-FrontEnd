@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import "./App.css";
 
 //Pages
@@ -18,8 +19,9 @@ import AccountSettings from "./Components/AccountSettings";
 import "./App.css";
 
 function App() {
-  const [user, setUser] = useState(null);
-  const [token, setToken] = useState(null);
+
+  const [user, setUser] = useState(null)
+  const [token, setToken] = useState(null)
 
   return (
     <>
@@ -41,6 +43,7 @@ function App() {
           <Route path="/hivechat" element={<HiveChat />} />
           <Route path="/findbuddy" element={<FindBuddy />} />
           <Route path="/accountsettings" element={<AccountSettings />} />
+
         </Routes>
       </Router>
     </>
