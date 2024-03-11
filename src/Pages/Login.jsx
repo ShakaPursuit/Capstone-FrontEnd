@@ -54,18 +54,6 @@ const Login = ({ setUser, setToken }) => {
         const { user, token } = res;
         setUser(user);
         setToken(token);
-        
-
- const Login = () => {
-  return (
-    <div className="frame">
-      <div className="div" >
-        <img className="updated-logo"src={logo}/>
-        <input className="text-wrapper-2" type="text" placeholder="UserName"/>
-      
-        <img  className="toggle-on-instance" src={toggle}/>
-
-        
         setFormData({
           username: "",
           password_hash: "",
@@ -79,8 +67,10 @@ const Login = ({ setUser, setToken }) => {
     })
     .catch((err) => console.log(err));
   };
-  
+        
 
+ const Login = () => {
+ 
   return (
     <>
       <div>
@@ -121,5 +111,6 @@ const Login = ({ setUser, setToken }) => {
     </>
   );
 };
+}
 
 export default Login;
