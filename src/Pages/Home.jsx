@@ -5,11 +5,11 @@ import NavBar from "../Components/NavBar";
 const Home = ({ user, token }) => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!user && !token) {
-      navigate("/login");
-    }
-  }, [user, token, navigate]);
+  // useEffect(() => {
+  //   if (!user && !token) {
+  //       navigate("/signup");
+  //   }
+  // }, [user, token, navigate]);
   return (
     <>
       <div className="home">

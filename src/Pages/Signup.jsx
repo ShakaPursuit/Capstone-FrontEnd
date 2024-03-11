@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/GH_Logo.png"
+import logo from "../assets/GH_Logo.png";
 
 const Signup = ({ setUser, setToken }) => {
   const API = import.meta.env.VITE_BASE_URL;
@@ -21,7 +21,7 @@ const Signup = ({ setUser, setToken }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch(`${API}/users`, {
+    fetch(`${API}/profiles`, {
       method: "POST",
       body: JSON.stringify(formData),
       headers: {
@@ -30,18 +30,18 @@ const Signup = ({ setUser, setToken }) => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
-        if (res.user.user_id) {
+        // console.log("The response: ",res);
+        if (res.user.userprofile_id) {
           setUser(res.user);
           setToken(res.token);
-          setFormData((prev) => ({
+          setFormData(() => ({
             username: "",
             email: "",
             password_hash: "",
           }));
-          navigate("/newUserProfile");
+          navigate("/");
         } else {
-          console.log(res);
+          console.log("The error: ",res);
         }
       })
       .catch((err) => console.log(err));
@@ -49,42 +49,42 @@ const Signup = ({ setUser, setToken }) => {
 
   return (
     <>
-    <div>
-      <img className="logo" src={logo} />
-      <form className="form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Enter Username"
-          name="username"
-          value={formData.username}
-          onChange={handleInputChange}
-          required
-        />
-        <br />
-        <br />
-        <input
-          type="email"
-          placeholder="Enter Email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          required
-        />
-        <br />
-        <br />
-        <input
-          type="password"
-          placeholder="Enter Password"
-          name="password_hash"
-          value={formData.password_hash}
-          onChange={handleInputChange}
-          required
-        />
-        <br />
-        <br />
-        <button type="submit">CREATE ACCOUNT</button>
-      </form>
-    </div>
+      <div>
+        <img className="logo" src={logo} />
+        <form className="form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="username"
+            value={formData.username}
+            onChange={handleInputChange}
+            required
+          />
+          <br />
+          <br />
+          <input
+            type="email"
+            placeholder="Enter Email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+          />
+          <br />
+          <br />
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="password_hash"
+            value={formData.password_hash}
+            onChange={handleInputChange}
+            required
+          />
+          <br />
+          <br />
+          <button type="submit">CREATE ACCOUNT</button>
+        </form>
+      </div>
     </>
   );
 };
