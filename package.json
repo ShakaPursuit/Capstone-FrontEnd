@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.12",
+    "@nivo/line": "^0.85.1",
     "@notifee/react-native": "^7.8.2",
     "@react-native-community/push-notification-ios": "^1.11.0",
     "@react-native-firebase/app": "^18.9.0",
@@ -18,9 +22,13 @@
     "bootstrap": "^5.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1",
+    "react-modal-promise": "^1.0.2",
     "react-native-webview": "^13.8.1",
     "react-router-dom": "^6.22.2",
-    "swiper": "^11.0.7"
+    "recharts": "^2.12.2",
+    "swiper": "^11.0.7",
+    "theme": "^0.0.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

@@ -122,7 +122,7 @@ const user1 = {
                             <div id="interaction">{formatChatDialogue()}</div>
                               <Progress2 id='p-user2'/>
                             
-                            <form id="form-2"onSubmit={handleSendUserTwoChat}>
+                            {/* <form id="form-2"onSubmit={handleSendUserTwoChat}>
                               <button id="user2-send"type="submit" disabled={userTwoButtonDisabled}>Send</button>
                               <br />
                               <img src={user2.photoUrl} alt="User 2" id="user2" />
@@ -135,7 +135,7 @@ const user1 = {
                                 }}
                                 />
                             </form>
-                            <NavBar/>
+                            <NavBar/> */}
                     {/* <footer className="text-wrapper-10">
                         <div>
                         <img id="button1" src={button1}/>

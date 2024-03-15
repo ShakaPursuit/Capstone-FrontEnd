@@ -49,7 +49,7 @@ const Signup = ({ setUser, setToken }) => {
 
   return (
     <>
-      <div>
+      <div id='sign-upPage'>
         <img className="logo" src={logo} />
         <form className="form" onSubmit={handleSubmit}>
           <input

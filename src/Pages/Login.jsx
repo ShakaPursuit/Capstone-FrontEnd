@@ -10,7 +10,7 @@ import "../App.css";
 
 
 const Login = ({ setUser, setToken }) => {
-  const API = import.meta.env.VITE_API_KEY;
+  const API = import.meta.env.VITE_BASE_KEY;
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -40,7 +40,7 @@ const Login = ({ setUser, setToken }) => {
   const handleLogin = (e) => {
     e.preventDefault();
     
-    fetch(`${API}/users/login`, {
+    fetch(`${API}/profiles/login`, {
       method: "POST",
       body: JSON.stringify(formData),
       headers: {
@@ -73,40 +73,58 @@ const Login = ({ setUser, setToken }) => {
  
   return (
     <>
-      <div>
-        <div id="container">
-          <div className="frame">
-            <div className="div">
-              <img className="updated-logo" src={logo} />
-              <form onSubmit={handleLogin}>
+      <div id="login-page">
+        <div >
+
+        <header><img className="updated-logo" src={logo} /></header>
+
+        </div>
+        <div>
+
+        <main><form onSubmit={handleLogin}>
                 <input
-                  className="text-wrapper-2"
+                className="new-login"
+                 
                   type="text"
                   onChange={handleUser}
                   placeholder="UserName"
                 />
-                <img className="toggle-on-instance" src={toggle} />
+                <br></br>
+                <br></br>
+                {/* <img className="toggle-on-instance" src={toggle} /> */}
                 <input
-                  className="text-wrapper-3"
+                className="new-password"
+             
                   type="password"
                   onChange={handlePass}
                   placeholder="Password"
                 />
-                <div className="overlap">
-                  <button type="submit" className="login">
+                <div id="login-div"> 
+                <br></br>
+                  <button id="new-submit"type="submit" >
                     LOGIN
-                  </button>
-                </div>
+                  </button> 
+                 </div> 
               </form>
-              <div classname="center">
-               <Link to="/signup">
-                <button className="sign-up">Sign-Up</button>
+              
+              <br></br>
+              <div className="new-SignUpDiv">
+
+        <Link to="/signup">
+                <button className="new-signup" >Sign-Up</button>
                </Link>
               </div>
-              <img className="quote" src={quote} />
-            </div>
-          </div>
+
+              </main>
         </div>
+
+        <div className="footer">
+        <footer>
+          <img className="bottom-logo" src={quote}/>
+        </footer>
+        </div>
+
+       
       </div>
     </>
   );

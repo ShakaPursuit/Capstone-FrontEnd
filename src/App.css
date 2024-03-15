@@ -1,3 +1,23 @@
+#root{
+  height:100vh;
+  display: flex;
+  margin: 0;
+  /* min-width: 1080px; 
+
+   height: 100vh; 
+   text-align: center; */
+
+}
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* div {
+  width: 100vw;
+  height: 100vh;
+} */
 
 .frame {
   background-color: white;
@@ -538,7 +558,7 @@ form#form,form#form-2{
   background-color:white;
   height: 125px;
   /* margin-bottom: 70px; */
-  border:2px solid black;
+  /* border:2px solid black; */
  
   text-align: center;
 font-weight: 500;
@@ -596,24 +616,34 @@ width:150px}
  
 }
 .user{
-border:.5px solid black;
-width :200px;
+/* border:.5px solid black; */
+width :1057px;
 padding:30px;
 height:220px;
+text-align: left;
+/* padding-bottom: 10px; */
+border-radius: 15px;
 }
 div.scroll {
-  /* margin: 4px, 4px; */
-  /* padding: 4px; */
-  background-color: rgb(254, 254, 254);
-  /* width: 500px; */
-  height: 200px;
+   margin-left:10px; 
+   margin: 4px, 4px; 
+   padding: 4px; 
+  display: grid;
+  background-color: #2977fa;;
+  width: 800px;
+  height: 340px;
   overflow-x: hidden;
   overflow-y: auto;
   text-align: justify;
-  width: fit-content;
-  border-radius: 20px;
-  border: 2px solid;
+  width: 100;
+  border-radius: 15px;
+  text-decoration: none;
+   /* border: 2px solid;  */
   text-align: center;
+  border-radius: 15px;
+  /* background-color: black; */
+  /* color: white; */
+
   
   
 }
@@ -675,7 +705,281 @@ margin-left: 15px;
   border-radius: 15px;
   margin-left: 10px;
 
+
 }
 #users{
   text-align: center;
 }
+
+#inter-nav{
+  border:3px solid;
+width:100%;
+height:100%;
+
+border-radius: 20px;
+margin: 0;
+}
+
+img#inter-home{
+border:2px solid;
+border-radius: 15px;
+;
+
+
+}
+
+#login-page{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    "head head head",
+    "main main main",
+    "main  main main",
+    "foot foot foot ";
+  /* grid-template-rows: 50px 1fr 30px;
+  grid-template-columns:  1fr; */
+  background-color: #2977fa;
+  /* display: flex; */
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+
+}
+#login-page > header{
+  grid-area: head;
+}
+#login-page > main{
+  grid-area: main;
+text-align: center;
+ 
+  
+}
+#login-page >footer{
+  grid-area: foot;
+}
+
+#interface {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    "nav  main main"
+    "nav  main main"
+    "nav  foot foot"
+    "nav  foot foot";
+  grid-template-rows: 50px 1fr 30px;
+  grid-template-columns: 150px 1fr;
+  background-color: #2977fa;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+
+}
+
+#interface > header {
+  grid-area: head;
+  background-color: #8ca0ff;
+}
+
+#inter-nav {
+  grid-area: nav;
+  background-color: white;
+  /* background-color: var(--GHBlue); */
+  /* display: flex; */
+  /* flex-direction: column; */
+  justify-content: space-evenly;
+  align-items: center;
+
+  /* padding: 10px; */
+
+}
+
+#interface > main {
+  grid-area: main;
+  background-color: #2977fa;
+  display: grid;
+  /* padding-left: 50px; */
+}
+
+#interface > footer {
+  grid-area: foot;
+  width:100%;
+  background-color: #2977fa;;
+}
+
+#progress-graph{
+  /* border:2px solid; */
+height:175px;
+border-radius: 15px;
+display:grid;
+width: 500px;
+
+}
+
+#user-card{
+  border:2px solid;
+  height:175px;
+  border-radius: 15px;
+  margin-top: 12px;
+  text-wrap: 50px;
+  /* text-align: center */
+ }
+  #misc{border:2px solid;
+    height:140px;
+    border-radius: 15px;
+  
+    
+  }
+  #community-feed{
+  width:100%;
+  height:300px;
+  border-radius: 15px;
+  margin-left: 15px;
+  
+}
+
+div.user{
+  background-color: gray;
+  border-bottom: 20px solid #2977fa;;
+  height: 300px;
+  width:900px;
+ border-bottom-left-radius: 30px;
+ border-bottom-right-radius: 30px;
+ 
+  
+}
+.community-feed{margin-right: 100px;}
+
+
+    .graph {
+      display: flex;
+      align-items: flex-end;
+      height: 175px;
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 20px;
+    }
+
+    .bar {
+      flex: 1;
+      margin-right: 10px;
+      background: linear-gradient(to top, #00b8ff, #0077c2);
+      transition: height 0.5s ease;
+      height:70%;
+      animation: animateBar 1s ease-in-out forwards;
+    }
+    .bar2 {
+      flex: 1;
+      margin-right: 10px;
+      background: linear-gradient(to top, hsl(197, 100%, 50%), rgb(176, 255, 58));
+      transition: height 0.5s ease;
+      height:40%;
+      animation: animateBar 1s 0.3s ease-in-out forwards
+    }
+    .bar3 {
+      flex: 1;
+      margin-right: 10px;
+      background: linear-gradient(to top, #00b8ff, white);
+      transition: height 0.5s ease;
+      height:30%;
+      animation: animateBar 1s 0.6s ease-in-out forwards;
+    }
+@keyframes animateBar {
+      0% {
+        height: 0;
+      }
+      /* 80% {
+        height: calc(100% - 10px);
+      }*/
+      /* 100% {
+        height: 100%;
+      }  */
+    }
+
+
+
+    .bar:hover {
+      height: 100%;
+    }
+
+    .label {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      margin-top: 5px;
+      text-align: center;
+    }
+#progress-graph{
+  border-radius: 15px;
+}
+
+#single-photo{border-radius: 15px;
+height: 172px;}
+
+
+.body{background-color: #2977fa;;}
+
+.updated-logo{
+  width: 200px;
+  height: 200px;
+  /* margin-top: 100px; */
+  border-radius: 15px;
+}
+
+.new-login,.new-password{
+  /* border-radius: 10px; */
+  width:200px;
+  /* border-color: white; */
+  border: none;
+  border-bottom: 1px solid black; 
+  
+  padding: 5px;
+  font-size: 14px;
+  background-color: #2977fa;
+  
+
+  /* border-bottom: 50px black; */
+  
+}
+
+
+#login-div{
+  text-align: center;
+}
+.bottom-logo{
+  width:200px;
+  border-radius: 15px;
+  opacity: 40%;
+  
+
+}
+.footer{text-align: center;}
+
+
+#new-submit{
+  background-color: #7ED957;
+  width:150px;
+  border-radius: 15px;
+}
+.new-SignUpDiv{text-align: center;}
+.new-signup{background-color: #2977fa;
+  width:150px;
+  border-radius: 15px;
+}
+
+#sign-upPage{
+ 
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+      "head head head",
+      "main main main",
+      "main  main main",
+      "foot foot foot ";
+    /* grid-template-rows: 50px 1fr 30px;
+    grid-template-columns:  1fr; */
+    background-color: white;
+    /* display: flex; */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+  
+  }

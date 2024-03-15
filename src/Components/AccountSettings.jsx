@@ -6,6 +6,14 @@ import NavBar from './NavBar';
 const AccountSettings = () => {
     return (
         <>
+        <div id="account-settings">
+            <header><h1 id='head'>Account Settings</h1></header>
+            <main></main>
+            <footer></footer>
+
+
+
+        </div>
             <div className="frame">
                 <div className='div'>
 
@@ -34,7 +42,7 @@ const AccountSettings = () => {
 
                     </div>
                 </div>
-                <NavBar />
+               
             </div>
         </>
 

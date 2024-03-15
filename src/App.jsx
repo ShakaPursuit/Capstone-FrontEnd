@@ -11,6 +11,7 @@ import ProfileSettings from "./Pages/ProfileSettings";
 import Goals from "./Pages/Goals";
 import HiveChat from "./Pages/HiveChat";
 import FindBuddy from "./Pages/FindBuddy";
+import InterFace from "./Pages/InterFace";
 
 //Components
 import NavBar from "./Components/NavBar";
@@ -42,6 +43,7 @@ function App() {
           <Route path="/hivechat" element={<HiveChat />} />
           <Route path="/findbuddy" element={<FindBuddy />} />
           <Route path="/accountsettings" element={<AccountSettings />} />
+          <Route path="/interface" element={<InterFace/>}/>
 
         </Routes>
       </Router>
