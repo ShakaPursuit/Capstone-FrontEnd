@@ -74,7 +74,7 @@ const InterFace = () => {
         <div id="interface">
           
           <div id="inter-nav">
-            <navbar id="interface-nav">
+            <navbar id="interface-nav" >
               <li>
                 <div>
                   <ul>
