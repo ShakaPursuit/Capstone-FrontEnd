@@ -2,7 +2,6 @@ import React from "react";
 import "../Profile.css"
 import background from "../assets/pf.png"
 import { Link } from "react-router-dom";
-import NavBar from "../Components/NavBar";
 const ProfileSettings=()=>{
 
 
@@ -75,7 +74,6 @@ return(<>
     </div>
     <button id="submit" className="text-wrapper-20">SUBMIT</button>
 
-<NavBar/>
 </div>
 
 
