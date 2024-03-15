@@ -17,6 +17,7 @@ import FindBuddy from "./Pages/FindBuddy";
 import NavBar from "./Components/NavBar";
 import AccountSettings from "./Components/AccountSettings";
 import "./App.css";
+import InterFace from "./Pages/InterFace";
 
 function App() {
   const [user, setUser] = useState(localStorage.getItem("user"));
@@ -100,6 +101,10 @@ function App() {
                 token={token}
               />
             }
+          />
+          <Route
+          path="/interface"
+          element={<InterFace/>}
           />
         </Routes>
       </Router>
