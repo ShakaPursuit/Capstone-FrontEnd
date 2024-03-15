@@ -39,7 +39,7 @@ const Signup = ({ setUser, setToken }) => {
             email: "",
             password_hash: "",
           }));
-          navigate("/");
+          navigate("/newProfile");
         } else {
           console.log("The error: ",res);
         }

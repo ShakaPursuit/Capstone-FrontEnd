@@ -5,7 +5,7 @@ import { useState ,useEffect} from "react";
 import "../App.css"
 import  Progress  from "../Components/ProgressBar";
 import  Progress2  from "../Components/ProgressBar2";
-import NavBar from "../Components/NavBar";
+
 
 const user1 = {
               id: '123456789',
@@ -135,7 +135,6 @@ const user1 = {
                                 }}
                                 />
                             </form>
-                            <NavBar/>
                     {/* <footer className="text-wrapper-10">
                         <div>
                         <img id="button1" src={button1}/>
