@@ -5,11 +5,11 @@ import HiveChat2 from "../assets/hivechat_icon.png";
 import Buddies from "../assets/find_a_buddy_icon.png";
 import CreateGoal from "../assets/GH_create_goal.png";
 import  { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import LineBar from "../Components/LineBar";
+import HiveChat from "./HiveChat";
 import "../App.css"
 import 'bootstrap/dist/css/bootstrap.css'
-import { useParams } from "react-router-dom";
-// import LineBar from "../Components/LineBar";
-import HiveChat from "./HiveChat";
 
 
 const InterFace = () => {
@@ -18,13 +18,18 @@ const InterFace = () => {
       width: '50px',
       borderRadius: '15px',
     };
-  
+    
     const API = import.meta.env.VITE_BASE_KEY;
     let { userprofile_id } = useParams();
-  
+    
     const [users, setUsers] = useState([]);
     const [goals, setGoals] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(true);
+    const [number, setNumber] = useState(['70%']);
+    
+    
+    console.log('CSS variable updated:', number);
+    
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
       };
@@ -73,42 +78,7 @@ const InterFace = () => {
  
         <div id="interface">
           
-          <div id="inter-nav">
-            <navbar id="interface-nav" >
-              <li>
-                <div>
-                  <ul>
-                    
-                    <img id="inter-home" style={logoStyle} src={GoalHive} alt="GoalHive Logo" />
-                    <p>Home</p>
-                  </ul>
-                  
-                </div>
-               
-                <ul>
-                  <img id="inter-home" style={logoStyle} src={ProfileIcon} alt="Profile Icon" />
-                  <p>Profiles</p>
-                </ul>
-                <ol>
-                  <img id="inter-home" style={logoStyle} src={HiveChat2} alt="Hive Chat" />
-                 <p>Chat</p>
-                </ol>
-                <ul>
-                  <img id="inter-home" style={logoStyle} src={CreateGoal} alt="Create Goal" />
-                  <p>Goals</p>
-                </ul>
-                    {/* <button >Messages</button> */}
-                <div>
-
-                <div>
-                
-
-               
-      </div>
-                </div>
-              </li>
-            </navbar>
-          </div>
+          
           <main>
             <div className="container">
               <div className="row">
@@ -116,7 +86,7 @@ const InterFace = () => {
                 
                   <div id="progress-graph">
                     <h2>
-                        {/* {<LineBar/>} */}
+                        {<LineBar number={number}/>}
                     </h2>
                   </div>
                 </div>

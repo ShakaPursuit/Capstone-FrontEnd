@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import GoalHive from "../assets/GH_Nobg.png";
 import ProfileIcon from "../assets/profile_icon.png";
@@ -9,6 +9,10 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import "./Navbar.css";
 
 const NavBar = ({ navBar, setNavBar }) => {
+  
+
+  
+
   const location = useLocation();
   console.log(location)
   useEffect(() => {
@@ -20,9 +24,10 @@ const NavBar = ({ navBar, setNavBar }) => {
     }
   }, [location.pathname]);
 
-  return navBar ? (
+  return navBar ?  (
     <nav className="nav">
       <Link className="navbar-link" to="/">
+  
         <img id="goalhive-icon" src={GoalHive} alt="" />
         <span>Home</span>
       </Link>
@@ -50,17 +55,27 @@ const NavBar = ({ navBar, setNavBar }) => {
         onClick={() => {
           setNavBar(!navBar);
         }}
+        onMouseEnter={()=>{
+          setNavBar(!navBar)
+         }}
       >
-        open
+        ↩
       </button>
     </nav>
   ) : (
     <button className="navbar-close"
       onClick={() => {
         setNavBar(!navBar);
+        
       }}
+      
+           onMouseEnter={()=>{
+            setNavBar(!navBar)
+           }}
+         
+      
     >
-      <RxHamburgerMenu />
+      <  RxHamburgerMenu className="hamburger"  />
     </button>
   );
 };
