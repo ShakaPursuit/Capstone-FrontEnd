@@ -12,7 +12,7 @@ const ProtectedRoute = ({
   return isAuthenticated ? (
     <Component user={user} token={token} />
   ) : (
-    <Navigate to="/login" replace />
+    <Navigate to="/" replace />
   );
 };
 

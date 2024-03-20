@@ -20,16 +20,17 @@ import "./App.css";
 import InterFace from "./Pages/InterFace";
 
 function App() {
-  const [user, setUser] = useState(localStorage.getItem("user"));
-  const [token, setToken] = useState(localStorage.getItem("token"));
+  const [user, setUser] = useState(
+    JSON.parse(localStorage.getItem("user")) || null
+  );
+  const [token, setToken] = useState(
+    JSON.parse(localStorage.getItem("token")) || null
+  );
 
   const [navBar, setNavBar] = useState(false);
-
   const isAuthenticated = user && token;
 
-  // useEffect(() => {
-  //   const storedUser = localStorage.getItem("user");
-  // });
+  console.log(user);
 
   return (
     <div className="app">
@@ -37,15 +38,25 @@ function App() {
         <NavBar navBar={navBar} setNavBar={setNavBar} />
         <Routes>
           <Route path="/" element={<Home user={user} token={token} />} />
-          <Route path="/profile" element={<UserProfile />} />
+          <Route
+            path="/profile"
+            element={
+              <UserProfile
+                setUser={setUser}
+                setToken={setToken}
+                user={user}
+                token={token}
+              />
+            }
+          />
           <Route
             path="/login"
             element={
               <Login
-                user={user}
-                token={token}
                 setUser={setUser}
                 setToken={setToken}
+                user={user}
+                token={token}
               />
             }
           />

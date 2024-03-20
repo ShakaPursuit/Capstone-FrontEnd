@@ -14,13 +14,13 @@ const NavBar = ({ navBar, setNavBar }) => {
   
 
   const location = useLocation();
-  console.log(location)
+  // console.log(location);
   useEffect(() => {
     // setNavBar(false);
-    if(location.pathname === "/"){
-      setNavBar(true)
-    } else{
-      setNavBar(false)
+    if (location.pathname === "/") {
+      setNavBar(true);
+    } else {
+      setNavBar(false);
     }
   }, [location.pathname]);
 
@@ -33,25 +33,25 @@ const NavBar = ({ navBar, setNavBar }) => {
       </Link>
 
       <Link className="navbar-link" to="/findbuddy">
-        <img id="buddies-icon" src={Buddies} alt="" />
+        <img src={Buddies} alt="" />
         <span>Find Friends</span>
       </Link>
 
       <Link className="navbar-link" to="/goals">
-        <img id="createGoal-icon" src={CreateGoal} alt="" />
+        <img src={CreateGoal} alt="" />
         <span>Goals</span>
       </Link>
 
       <Link className="navbar-link" to="/hivechat">
-        <img id="hivechat-icon" src={HiveChat} alt="" />
+        <img src={HiveChat} alt="" />
         <span>HiveChat</span>
       </Link>
 
       <Link className="navbar-link" to="/profile">
-        <img id="profile-icon" src={ProfileIcon} alt="" />
+        <img src={ProfileIcon} alt="" />
         <span>Profile</span>
       </Link>
-      <button 
+      <button
         onClick={() => {
           setNavBar(!navBar);
         }}
@@ -63,7 +63,8 @@ const NavBar = ({ navBar, setNavBar }) => {
       </button>
     </nav>
   ) : (
-    <button className="navbar-close"
+    <button
+      className="navbar-close"
       onClick={() => {
         setNavBar(!navBar);
         

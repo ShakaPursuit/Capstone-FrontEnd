@@ -95,11 +95,11 @@ const Home = ({ user, token }) => {
 
   }
 
-  // useEffect(() => {
-  //   if (!user && !token) {
-  //       navigate("/signup");
-  //   }
-  // }, [user, token, navigate]);
+  useEffect(() => {
+    if (!user && !token) {
+      navigate("/login");
+    }
+  }, []);
 
   return (
     <>
