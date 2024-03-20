@@ -40,7 +40,7 @@ const Goals = ({ user, token }) => {
       {goals.map((goal) => {
         return (
           <div key={goal.goal_id} className="goalcard">
-            {console.log(goal.target_date.split("T"))}
+            {/* {console.log(goal.target_date.split("T"))} */}
             {/* {console.log(goal.target_date)} */}
             {/* {console.log(goal.target_date.slice(0, 10))} */}
             <h2>{goal.name}</h2>

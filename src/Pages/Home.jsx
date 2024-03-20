@@ -24,11 +24,11 @@ const Home = ({ user, token }) => {
   //   fetchData()
   // }, [])
 
-  // useEffect(() => {
-  //   if (!user && !token) {
-  //       navigate("/signup");
-  //   }
-  // }, [user, token, navigate]);
+  useEffect(() => {
+    if (!user && !token) {
+      navigate("/login");
+    }
+  }, []);
 
   return (
     <>
