@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import AccountSettings from "../Components/AccountSettings";
-import Profile from "../assets/profile_icon.png";
 
 const UserProfile = ({ setUser, setToken, user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
   const navigate = useNavigate();
-
-  const [profiles, setProfiles] = useState([]);
+  // console.log("The user: ", user);
+  const [profiles, setProfiles] = useState({});
 
   const handleLogout = () => {
     setUser(null);
@@ -53,17 +51,12 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
         Log Out
       </Button>
 
-      <div>
-
-      </div>
-
-      {/* {profiles.map((user) => {
-        return (
-          <div key={user.userprofile_id}>
-            <h1>{user.firstname}</h1>
-          </div>
-        );
-      })} */}
+      <span>
+        {profiles.firstname}
+        <br/>
+        {profiles.lastname}
+        {profiles.lasttname}
+      </span>
     </div>
   );
 };
