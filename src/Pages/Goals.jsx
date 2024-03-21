@@ -17,6 +17,7 @@ const Goals = ({ user, token }) => {
     })
       .then((res) => res.json())
       .then((res) => {
+        console.log(res)
         setGoals(res);
       })
       .catch((err) => {
@@ -24,7 +25,7 @@ const Goals = ({ user, token }) => {
         setGoals(res);
       });
   };
-  console.log("The goals", goals);
+  // console.log("The goals", goals);
 
   useEffect(() => {
     fetchData();
@@ -34,8 +35,8 @@ const Goals = ({ user, token }) => {
   return (
     <div className="goals">
       <h1>The Goals Page</h1>
-      <Link to="/goals/new">Create a Goal</Link>
-      {console.log(goals)}
+      {/* <Link to="/goals/new">Create a Goal</Link> */}
+      {/* {console.log(goals)} */}
 
       {goals.map((goal) => {
         return (
