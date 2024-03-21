@@ -76,7 +76,7 @@ function App() {
             element={
               <ProtectedRoute
                 element={Goals}
-                isAuthenticated={isAuthenticated}
+                isAuthenticated={!!isAuthenticated}
                 user={user}
                 token={token}
               />
@@ -110,8 +110,8 @@ function App() {
               <ProtectedRoute
                 element={NewProfile}
                 isAuthenticated={!!user && !!token}
-                setUser={setUser}
-                setToken={setToken}
+                // setUser={setUser}
+                // setToken={setToken}
                 user={user}
                 token={token}
               />

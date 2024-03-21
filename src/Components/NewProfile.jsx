@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const NewProfile = ({ user, token, setUser, setToken }) => {
+const NewProfile = ({ user, token, }) => {
   // console.log("user: ",user)
   const API = import.meta.env.VITE_BASE_URL;
 
