@@ -42,7 +42,7 @@ const NavBar = ({ navBar, setNavBar }) => {
         <span>HiveChat</span>
       </Link>
 
-      <Link className="navbar-link" to="/profile">
+      <Link className="navbar-link" to="/userProfile">
         <img src={ProfileIcon} alt="" />
         <span>Profile</span>
       </Link>

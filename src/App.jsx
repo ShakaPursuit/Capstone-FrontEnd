@@ -16,6 +16,8 @@ import FindBuddy from "./Pages/FindBuddy";
 //Components
 import NavBar from "./Components/NavBar";
 import AccountSettings from "./Components/AccountSettings";
+import NewProfile from "./Components/NewProfile";
+
 import "./App.css";
 
 function App() {
@@ -38,7 +40,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home user={user} token={token} />} />
           <Route
-            path="/profile"
+            path="/userProfile"
             element={
               <UserProfile
                 setUser={setUser}
@@ -102,11 +104,13 @@ function App() {
             }
           />
           <Route
-            path="/newProfile"
+            path="/profiles/newProfile"
             element={
               <ProtectedRoute
-                // element={NewProfile}
+                element={NewProfile}
                 isAuthenticated={!!user && !!token}
+                setUser={setUser}
+                setToken={setToken}
                 user={user}
                 token={token}
               />
