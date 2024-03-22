@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import NewGoal from "../Components/NewGoal";
+import EditGoal from "../Components/EditGoal";
 
 const Goals = ({ user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
   const [goals, setGoals] = useState([]);
   const [err, setError] = useState("");
 
-  console.log("The user obj", user);
+  const [editGoal, setEditGoal] = useState(false);
+
+  // console.log("The user obj", user);
 
   const fetchData = () => {
     fetch(`${API}/profiles/${user.userprofile_id}/goals`, {
@@ -17,7 +19,7 @@ const Goals = ({ user, token }) => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res)
+        // console.log(res);
         setGoals(res);
       })
       .catch((err) => {
@@ -31,22 +33,19 @@ const Goals = ({ user, token }) => {
     fetchData();
   }, []);
 
-
   return (
-    <div className="goals">
+    <div className="goals-container">
       <h1>The Goals Page</h1>
-      {/* <Link to="/goals/new">Create a Goal</Link> */}
-      {/* {console.log(goals)} */}
 
       {goals.map((goal) => {
         return (
           <div key={goal.goal_id} className="goalcard">
-            {/* {console.log(goal.target_date.split("T"))} */}
-            {/* {console.log(goal.target_date)} */}
-            {/* {console.log(goal.target_date.slice(0, 10))} */}
             <h2>{goal.name}</h2>
             <p>{goal.description}</p>
-            <p>Target Date: {goal.target_date}</p>
+            <p>Target Date: {goal.target_date.slice(0, 10)}</p>
+            <button onClick={() => setEditGoal(!editGoal)}>edit</button>
+            <button>Completed</button>
+            <EditGoal user={user} token={token} goalID={goal.goal_id} />
           </div>
         );
       })}

@@ -32,7 +32,7 @@ function App() {
   const [navBar, setNavBar] = useState(false);
   const isAuthenticated = user && token;
 
-  console.log(user);
+  // console.log(user);
 
   return (
     <div className="app">
@@ -40,17 +40,6 @@ function App() {
         <NavBar navBar={navBar} setNavBar={setNavBar} />
         <Routes>
           <Route path="/" element={<Home user={user} token={token} />} />
-          <Route
-            path="/userProfile"
-            element={
-              <UserProfile
-                setUser={setUser}
-                setToken={setToken}
-                user={user}
-                token={token}
-              />
-            }
-          />
           <Route
             path="/login"
             element={
@@ -71,6 +60,19 @@ function App() {
           <Route path="/hivechat" element={<HiveChat />} />
           <Route path="/findbuddy" element={<FindBuddy />} />
           <Route path="/accountsettings" element={<AccountSettings />} />
+          <Route
+            path="/userProfile"
+            element={
+              <ProtectedRoute
+                element={UserProfile}
+                isAuthenticated={!!isAuthenticated}
+                setUser={setUser}
+                setToken={setToken}
+                user={user}
+                token={token}
+              />
+            }
+          />
           <Route
             path="/goals"
             element={
@@ -117,10 +119,7 @@ function App() {
               />
             }
           />
-          <Route
-          path="/interface"
-          element={<InterFace/>}
-          />
+          <Route path="/interface" element={<InterFace />} />
         </Routes>
       </Router>
     </div>
