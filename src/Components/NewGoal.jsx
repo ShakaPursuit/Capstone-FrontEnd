@@ -1,37 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 // import "./NewGoal.css";
 
-const NewGoal = () => {
-  const API = import.meta.env.VITE_BASE_URL
+const NewGoal = ({ user, token }) => {
+  const API = import.meta.env.VITE_BASE_URL;
   const navigate = useNavigate();
+  const [interests, setInterests] = useState([]);
   const [goal, setGoal] = useState({
     name: "",
-    interests: "",
-    targetDate: "",
-    description: ""
+    target_date: "",
+    description: "",
+    userprofile_id: user.userprofile_id,
+    interest_id: user.interest_id,
   });
 
   const addGoal = () => {
-    const goalData = {
-      name: goal.name,
-      interests: goal.interests,
-      targetDate: goal.targetDate,
-      description: goal.description
-    }
     try {
-      fetch(`${API}/goals`,{
-        method: 'POST',
+      fetch(`${API}/profiles/${user.userprofile_id}/goals`, {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
+          Authorization: token,
         },
-        body: JSON.stringify(goalData)
+        body: JSON.stringify(goal),
       })
-      .then(res => res.json())
-      .then(()=> navigate('/goals'))
+        .then((res) => res.json())
+        .then(() => navigate("/userProfile"));
     } catch (error) {
-      return error
+      console.log(error);
+      return error;
     }
+  };
+
+  const getInterests = () => {
+    fetch(`${API}/interests`)
+      .then((res) => res.json())
+      .then((res) => {
+        setInterests(res);
+        console.log(res);
+      })
+      .catch((error) => console.log(error));
   };
 
   const handleTextChange = (event) => {
@@ -42,25 +50,41 @@ const NewGoal = () => {
     event.preventDefault();
     addGoal();
   };
-console.log(goal)
+
+  useEffect(() => {
+    getInterests();
+  }, []);
+  console.log(goal);
   return (
     <div className="new-goal-container">
       <form onSubmit={handleSubmit} className="form-container">
         <div className="form-field">
           <label htmlFor="name">Goal Name:</label>
           <br />
-          <input value={goal.name} onChange={handleTextChange} type="text" id="name" placeholder="Name Your Goal" required />
+          <input
+            value={goal.name}
+            onChange={handleTextChange}
+            type="text"
+            id="name"
+            placeholder="Name Your Goal"
+            required
+          />
         </div>
         <br />
         <br />
         <div className="form-field">
           <label htmlFor="interests">Select an Interest:</label>
           <br />
-          <select value={goal.interests} onChange={handleTextChange} id="interests" required>
+          <select
+            value={interests.interest_id}
+            onChange={handleTextChange}
+            id="interest_id"
+            required
+          >
             <option value="">Select an Interests</option>
-            <option value="Fitness">Fitness</option>
-            <option value="Finance">Finance</option>
-            <option value="Education">Education</option>
+            {interests.map(({ interest_id, name }) => {
+              return <option value={interest_id}>{name}</option>;
+            })}
           </select>
         </div>
         <br />
@@ -68,20 +92,24 @@ console.log(goal)
         <div className="form-field">
           <label htmlFor="tartgetDate">Target Date:</label>
           <br />
-          <select value={goal.targetDate} onChange={handleTextChange} id="targetDate" required>
-            <option value="">Select Target Date</option>
-            <option value="1 day">1 Day</option>
-            <option value="1 week">1 Week</option>
-            <option value="1 month">1 Month</option>
-            <option value="3 months">3 Months</option>
-          </select>
+          <input
+            type="date"
+            value={goal.target_date}
+            onChange={handleTextChange}
+            id="target_date"
+            required
+          />
         </div>
         <br />
         <br />
         <div className="form-field">
           <label htmlFor="description">Goal Description:</label>
           <br />
-          <textarea value={goal.description} onChange={handleTextChange} id="description" />
+          <textarea
+            value={goal.description}
+            onChange={handleTextChange}
+            id="description"
+          />
         </div>
         <br />
         <br />

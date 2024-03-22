@@ -9,6 +9,8 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
   const navigate = useNavigate();
   // console.log("The user: ", user);
   const [profiles, setProfiles] = useState({});
+  const [selectedGoals, setSelectedGoals] = useState(false);
+  // const [goals, setGoals] = useState({});
 
   const handleLogout = () => {
     setUser(null);
@@ -39,7 +41,7 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
     fetchData();
   }, []);
 
-  console.log("useState: ", profiles.username);
+  // console.log("user obj:", profiles);
 
   return (
     <div className="userprofile-container">
@@ -71,11 +73,13 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
 
       <div className="stats">
         <div className="stat">
-          <h3>Active Goals</h3>
+          <button onClick={() => setSelectedGoals(false)}>Active Goals</button>
           <p>{/* Add number of friends */}</p>
         </div>
         <div className="stat">
-          <h3>Completed Goals</h3>
+          <button onClick={() => setSelectedGoals(true)}>
+            Completed Goals
+          </button>
           <p>{/* Add number of posts */}</p>
         </div>
         <div className="stat">
@@ -84,8 +88,11 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
         </div>
       </div>
 
-      {/* <Goals /> */}
-
+      {!selectedGoals ? (
+        <Goals user={user} token={token} />
+      ) : (
+        <span>List of Completed Goals</span>
+      )}
     </div>
   );
 };
