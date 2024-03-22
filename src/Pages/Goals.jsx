@@ -10,7 +10,7 @@ const Goals = ({ user, token }) => {
   console.log("The user obj", user);
 
   const fetchData = () => {
-    fetch(`${API}/profiles/${user.userprofile_id}/goals`, {
+    fetch(`${API}/allgoals`, {
       headers: {
         Authorization: token,
       },
@@ -21,7 +21,7 @@ const Goals = ({ user, token }) => {
       })
       .catch((err) => {
         setError(err.message);
-        setGoals(res);
+        // setGoals(res);
       });
   };
   console.log("The goals", goals);

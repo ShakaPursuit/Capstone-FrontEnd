@@ -117,6 +117,15 @@ function App() {
           path="/interface"
           element={<InterFace/>}
           />
+           <Route
+            path="/findbuddy"
+            element={
+              <ProtectedRoute
+                element={FindBuddy}
+                isAuthenticated={!!user && !!token}
+                user={user}
+                token={token}/>}
+              />
         </Routes>
       </Router>
     </div>

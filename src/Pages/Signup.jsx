@@ -40,7 +40,7 @@ const Signup = ({ setUser, setToken }) => {
             email: "",
             password_hash: "",
           }));
-          navigate("/newProfile");
+          // navigate("/newProfile");
         } else {
           console.log("The error: ", res);
         }
