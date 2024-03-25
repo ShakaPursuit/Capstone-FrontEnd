@@ -48,7 +48,7 @@ function App() {
           {/* <Route path="/" element={<Home user={user} token={token} />} /> */}
           <Route path="/profile" element={<UserProfile />} />
 
-          <Route path="/" element={<Home user={user} token={token} />} />
+          <Route path="/" element={<Dash user={user} token={token} />} />
 
           <Route
             path="/login"
@@ -68,7 +68,7 @@ function App() {
           {/* <Route path="/goals" element={<Goals />} /> */}
           <Route path="/settings" element={<ProfileSettings />} />
           <Route path="/hivechat" element={<HiveChat />} />
-          <Route path="/goalprofile" element={<GoalProfile />} />
+          {/* <Route path="/goalprofile" element={<GoalProfile />} /> */}
           {/* <Route path="/findbuddy" element={<FindBuddy />} /> */}
           <Route path="/accountsettings" element={<AccountSettings />} />
           <Route
@@ -136,27 +136,21 @@ function App() {
           element={<InterFace/>}
           />
 
-           {/* <Route
+          
 
 
           <Route path="/" element={<Dash/>}/>
           <Route path="/feed" element={<Feed/>}/>
           <Route path="/currentgoals" element={<GetCurrentGoals/>}/>
-          <Route path="friendrequests" element ={<FriendRequest/>}/>
+          <Route path="/friendrequests" element ={<FriendRequest/>}/>
 
-           <Route
-
-            path="/findbuddy"
-            element={
-              <ProtectedRoute
-                element={FindBuddy}
-                isAuthenticated={!!user && !!token}
-                user={user}
-                token={token}/>}
-              /> */}
-              <Route path="/findbuddy"
-              element={<GoalProfile/>}/>
-
+            <Route
+path="/findbuddy"
+  element ={<GoalProfile/>}
+  // isAuthenticated={!!user && !!token}
+  // user={user}
+  // token={token}
+ />
         </Routes>
       </Router>
     </div>

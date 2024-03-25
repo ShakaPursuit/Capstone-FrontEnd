@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 const Feed = () => {
-  const API = import.meta.env.VITE_BASE_KEY;
+  const API = import.meta.env.VITE_BASE_URL;
 
   const [users, setUsers] = useState([]);
-  const [goals, setGoals] = useState([]);
+  const [allgoals, setAllGoals] = useState([]);
   const [showCommentSection, setShowCommentSection] = useState({});
 
   const toggleCommentSection = (userId) => {
@@ -61,12 +61,13 @@ const Feed = () => {
   useEffect(() => {
     const fetchGoals = async () => {
       try {
-        const response = await fetch(`${API}/goals`);
+        const response = await fetch(`${API}/allgoals`);
         if (!response.ok) {
           throw new Error(`Request failed with status: ${response.status}`);
         }
         const data = await response.json();
-        setGoals(data);
+        setAllGoals(data);
+        console.log(allgoals)
       } catch (error) {
         console.error('Fetch error:', error);
       }
@@ -93,10 +94,10 @@ const Feed = () => {
 
               <img id="feed" src={`${user.profile_img}`} />
 
-              {goals
+              {allgoals
                 .filter((goal) => goal.goal_id === user.userprofile_id)
                 .map((goal, goalIndex) => (
-                  <p key={goalIndex}>〉{goal.description}</p>
+                  <p key={goalIndex}>〉{goal.description}</p>
                 ))}
 
               <p>

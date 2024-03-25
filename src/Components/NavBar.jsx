@@ -11,13 +11,8 @@ import "./Navbar2.css";
 const NavBar = ({ navBar, setNavBar }) => {
   
 
-  
-
-  const location = useLocation();
-  // console.log(location);
   useEffect(() => {
     // setNavBar(false);
-
     if(location.pathname === "/"||location.pathname === "/dash"){
       setNavBar(true)
       setTimeout(() => {
@@ -25,14 +20,10 @@ const NavBar = ({ navBar, setNavBar }) => {
       }, 10000); 
     } else{
       setNavBar(false)
-
-    if (location.pathname === "/") {
-      setNavBar(true);
-    } else {
-      setNavBar(false);
-
     }
   }, [location.pathname]);
+
+ 
 
   
 
@@ -75,7 +66,6 @@ const NavBar = ({ navBar, setNavBar }) => {
 
       <button id="navbar-close"
 
-      <button
 
         onClick={() => {
           setNavBar(!navBar);

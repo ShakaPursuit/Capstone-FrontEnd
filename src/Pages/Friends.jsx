@@ -1,19 +1,20 @@
 import React,{useState,useEffect} from "react";
+import { useParams } from "react-router-dom";
 
-
-const FriendRequest=()=>{
-    const API = import.meta.env.VITE_BASE_KEY;
+const FriendRequest=({setUser, token, user, setToken})=>{
+    const API = import.meta.env.VITE_BASE_URL;
+    let {userprofile_id} = useParams()
     const [friendRequest, setFriendRequest] = useState([])
     useEffect(() => {
         const fetchFriendRequests = async () => {
           try {
-            const response = await fetch(`${API}/profiles/1/connections/`);
+            const response = await fetch(`${API}/profiles/${userprofile_id}/connections/`);
             if (!response.ok) {
               throw new Error(`Request failed with status: ${response.status}`);
             }
             const data = await response.json();
             setFriendRequest(data);
-            // console.log(friendRequest);
+             console.log(friendRequest);
           } catch (error) {
             console.error('Fetch error:', error);
           }
