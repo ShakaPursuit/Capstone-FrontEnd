@@ -1,13 +1,14 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Form, Button } from "react-bootstrap";
 import React from "react";
 import toggle from "../assets/toggle.png";
 import logo from "../assets/GH.png";
 import quote from "../assets/quote.png";
 
-import "../App.css";
+import "./login.css";
 
-const Login = ({ setUser, setToken, user, token,}) => {
+const Login = ({ setUser, setToken, user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
   const navigate = useNavigate();
 
@@ -23,11 +24,6 @@ const Login = ({ setUser, setToken, user, token,}) => {
       [name]: value,
     }));
   };
-
-  const updateLoginDialogue = (user,  token) => {
-    localStorage.setItem("user", JSON.stringify(user))
-    localStorage.setItem("token", token)
-  }
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -46,7 +42,8 @@ const Login = ({ setUser, setToken, user, token,}) => {
           console.log({ user, token });
           setUser(user);
           setToken(token);
-          updateLoginDialogue()
+          localStorage.setItem("user", JSON.stringify(user));
+          localStorage.setItem("token", JSON.stringify(token));
           setFormData(() => ({
             username: "",
             password_hash: "",
@@ -59,64 +56,86 @@ const Login = ({ setUser, setToken, user, token,}) => {
       .catch((err) => console.log(err));
   };
 
+  // useEffect(() => {
+  //   if (user && token) {
+  //     localStorage.setItem("user", JSON.stringify(user));
+  //     localStorage.setItem("token", JSON.stringify(token));
+  //   }
+  // }, [user, token]);
+
+  // const storedUser = () => {
+  //   const storedUserData = localStorage.getItem("user")
+  //   if (storedUserData){
+  //     setUser(JSON.parse(storedUserData))
+  //     console.log(storedUserData)
+  //   }
+  // }
+
   return (
-    <>
-      <div>
-        <div id="container">
-          <div className="frame">
-            <div className="div">
-              <img className="updated-logo" src={logo} />
+    <div className="login">
+      {/* <img className="updated-logo" src={logo} /> */}
 
-              <form onSubmit={handleLogin}>
-                <p>uiqgeiugeiufg</p>
-                <p>{user}</p>
-                <p>{token}</p>
-                <input
-                  className="text-wrapper-2"
-                  type="text"
-                  placeholder="Username"
-                  name="username"
-                  value={formData.username}
-                  onChange={handleInputChange}
-                  required
-                />
+      <Form className="form" onSubmit={handleLogin}>
+        <Form.Group className="mb-3" controlId="username">
+          <Form.Label>Username</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter your username"
+            name="username"
+            value={formData.username}
+            onChange={handleInputChange}
+            required
+          />
+        </Form.Group>
 
-                <br />
-                <br />
+        <Form.Group className="mb-3" controlId="password">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Enter your password"
+            name="password_hash"
+            value={formData.password_hash}
+            onChange={handleInputChange}
+            required
+          />
+        </Form.Group>
 
-                {/* <img className="toggle-on-instance" src={toggle} /> */}
-                <input
-                  className="text-wrapper-3"
-                  type="password"
-                  placeholder="Enter Password"
-                  name="password_hash"
-                  value={formData.password_hash}
-                  onChange={handleInputChange}
-                  required
-                />
+        <Button variant="primary" type="submit">
+          Log in
+        </Button>
+      </Form>
 
-                <br />
-                <br />
+      {/* <form className="form" onSubmit={handleLogin}>
+        <input
+          type="text"
+          placeholder="Username"
+          name="username"
+          value={formData.username}
+          onChange={handleInputChange}
+          required
+        />
 
-                <div className="overlap">
-                  <button type="submit" className="login">
-                    LOGIN
-                  </button>
-                </div>
-              </form>
+        <br />
+        <br />
 
-              <br />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password_hash"
+          value={formData.password_hash}
+          onChange={handleInputChange}
+          required
+        />
 
-              <div className="center">
-                <Link to="/signup">
-                  <button className="sign-up">Sign-Up</button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+        <br />
+        <br />
+
+        <button type="submit">LOGIN</button>
+      </form> */}
+      <p>
+        Don't have an account? <Link to="/signup">Sign Up</Link>
+      </p>
+    </div>
   );
 };
 

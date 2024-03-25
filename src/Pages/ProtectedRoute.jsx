@@ -6,13 +6,20 @@ const ProtectedRoute = ({
   isAuthenticated,
   user,
   token,
+  setUser,
+  setToken,
 }) => {
   // console.log(isAuthenticated)
   // console.log("user obj from the protected route",user)
   return isAuthenticated ? (
-    <Component user={user} token={token} />
+    <Component
+      user={user}
+      token={token}
+      setToken={setToken}
+      setUser={setUser}
+    />
   ) : (
-    <Navigate to="/login" replace />
+    <Navigate to="/" replace />
   );
 };
 

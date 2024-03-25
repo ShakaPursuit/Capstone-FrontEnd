@@ -1,0 +1,163 @@
+/* UserProfile.css */ /*
+.userprofile-container {
+  padding: 20px;
+}
+
+.top-bar {
+  background-color: blue;
+  padding: 10px;
+  text-align: right;
+}
+
+.profile-header {
+  text-align: center;
+}
+
+.profile-header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #ffc107; 
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.stat {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.stat button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  .userprofile-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Adjust grid columns as needed */ /*
+    grid-gap: 20px;
+  }
+
+  .profile-header {
+    grid-column: 1 / span 1; /* Span across first column */ /*
+    text-align: left;
+  }
+
+  .stats {
+    grid-column: 2 / span 1; /* Span across second column */ /*
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .stat {
+    margin-bottom: 0;
+  }
+
+  .stat button {
+    margin-bottom: 0;
+  }
+
+  .stat p {
+    margin-bottom: 10px;
+  }
+}
+*/
+/* .userprofile-container {
+    padding: 20px;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .stat {
+    text-align: center;
+  }
+  
+  /* Add any additional styling as needed */
+
+/* UserProfile.css */
+.userprofile-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text within each row */
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.profile-header {
+  margin-bottom: 20px;
+}
+
+.profile-header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stat {
+  text-align: center;
+  flex: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+  }
+
+  .stat {
+    margin-bottom: 10px;
+  }
+}
+
+.userprofile-container p {
+  font-size: large;
+  line-height: 1.1;
+}
+
+#bio {
+  line-height: 2;
+  padding-top: 25px;
+}

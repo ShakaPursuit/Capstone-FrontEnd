@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/GH_Logo.png";
+import "./Signup.css";
 
 const Signup = ({ setUser, setToken }) => {
   const API = import.meta.env.VITE_BASE_URL;
@@ -34,58 +35,61 @@ const Signup = ({ setUser, setToken }) => {
         if (res.user.userprofile_id) {
           setUser(res.user);
           setToken(res.token);
+          localStorage.setItem("user", JSON.stringify(res.user));
+          localStorage.setItem("token", JSON.stringify(res.token));
           setFormData(() => ({
             username: "",
             email: "",
             password_hash: "",
           }));
-          navigate("/newProfile");
+          navigate("/profiles/newProfile");
         } else {
-          console.log("The error: ",res);
+          console.log("The error: ", res);
         }
       })
       .catch((err) => console.log(err));
   };
 
   return (
-    <>
-      <div>
-        <img className="logo" src={logo} />
-        <form className="form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Enter Username"
-            name="username"
-            value={formData.username}
-            onChange={handleInputChange}
-            required
-          />
-          <br />
-          <br />
-          <input
-            type="email"
-            placeholder="Enter Email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-          />
-          <br />
-          <br />
-          <input
-            type="password"
-            placeholder="Enter Password"
-            name="password_hash"
-            value={formData.password_hash}
-            onChange={handleInputChange}
-            required
-          />
-          <br />
-          <br />
-          <button type="submit">CREATE ACCOUNT</button>
-        </form>
-      </div>
-    </>
+    <div className="signup">
+      {/* <img className="logo" src={logo} /> */}
+      <form className="form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Enter Username"
+          name="username"
+          value={formData.username}
+          onChange={handleInputChange}
+          required
+        />
+        <br />
+        <br />
+        <input
+          type="email"
+          placeholder="Enter Email"
+          name="email"
+          value={formData.email}
+          onChange={handleInputChange}
+          required
+        />
+        <br />
+        <br />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password_hash"
+          value={formData.password_hash}
+          onChange={handleInputChange}
+          required
+        />
+        <br />
+        <br />
+        <button type="submit">CREATE ACCOUNT</button>
+      </form>
+      <p>
+        Already have an account? <Link to="/login">Login</Link>
+      </p>
+    </div>
   );
 };
 

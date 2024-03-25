@@ -171,6 +171,7 @@ img.quote {
 
 }
 
+
 .sign-up {
   margin-bottom: 50px;
   margin-left: 125px;
@@ -180,7 +181,8 @@ img.quote {
 
 }
 
-/*  */
+
+
 
 .frame .text-wrapper-5 {
   -webkit-text-stroke: 1px #000000;
@@ -197,9 +199,12 @@ img.quote {
   width: 266px;
 }
 
+
 .login {
   background-color: rgb(98, 231, 171);
 }
+
+
 
 #about {
   height: 200px;
@@ -363,6 +368,7 @@ header#chat.header {
 }
 
 
+
 #container {
   margin: 0;
   height: 100vh;
@@ -383,6 +389,11 @@ div.chat-background {
 
 #user1-send {
   margin-left: 300px;
+
+div.chat-background{background-color: rgb(0, 0, 255);}
+#user1-send{
+  margin-left:300px;
+
   background-color: rgb(33, 105, 220);
 }
 
@@ -666,6 +677,14 @@ form#form-2 {
   border: .05px solid
 }
 
+
+
+
+
+
+
+
+
 .app {
   display: flex;
   min-height: 100vh;
@@ -698,36 +717,9 @@ img#single-photo {
 
 } */
 
-/* #profile-icon{
-  background-color:rgba(4, 255, 0, 0.15);
-  border-radius: 15px;
-margin-left: 15px;
-} */
 
-/* #hivechat-icon{
-  background-color: rgba(0, 128, 255, 0.3);
-  border-radius: 15px;
-  margin-left: 15px;
-} */
+#users{
 
-/* #createGoal-icon{
-  background-color: rgba(0, 0, 0, 0.146);
-  border-radius: 15px;
-  margin-left: 15px;
-} */
-
-/* #buddies-icon{
-  background-color:rgb(255, 255, 255);
-  border-radius: 15px;
-  margin-left: 10px;
-} */
-
-/* #goalhive-icon{
-  border-radius: 15px;
-  margin-left: 10px;
-} */
-
-#users {
   text-align: center;
 }
 

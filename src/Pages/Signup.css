@@ -1,0 +1,22 @@
+
+.signup {
+  grid-area: m;
+  /* border: 1px solid green; */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* .signup img { */
+  /* height: 50px; */
+  /* width: 20%; */
+/* } */
+
+.signup p {
+  align-self: flex-end;
+}
+
+.form{
+  padding-top: 100%;
+}
