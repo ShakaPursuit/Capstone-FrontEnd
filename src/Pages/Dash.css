@@ -1,0 +1,114 @@
+
+
+div.scroll {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color:var(--GHBlue);
+  padding-bottom: 60px;
+    /* background-color: var(--GHBlue);
+    padding: 20px;
+    height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+  
+  align-items: center;
+  padding: 40px;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 60px; */
+  }
+  
+  #topbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #create-goal {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  strong {
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+  }
+  
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  #single-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  #p-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #dash-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 50px;
+    ;
+  }
+  
+  #dash-logo button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px; 
+    cursor: pointer;
+    height: 70px;
+  }
+  
+  #dash-logo button:last-child {
+    margin-top: 0;
+  }
+  
+  #dash-logo button:hover {
+    background-color: #222;
+  } 
+#dash-logo2{
+
+    height: 80px;
+
+}
+  

@@ -8,16 +8,16 @@ const Home = ({ user, token }) => {
 
   const [users, setUsers] = useState([]);
   const [goals, setGoals] = useState([]);
-  const [showCommentSection, setShowCommentSection] = useState(false);
   const [friendRequest, setFriendRequest] = useState([])
   const [post, setPosts] = useState([])
   const [count, setCount] = useState(0)
+  const [showCommentSection, setShowCommentSection] = useState(false);
 
 
   const toggleCommentSection = (userId) => {
     setShowCommentSection((prevState) => {
       const updatedState = { ...prevState };
-      updatedState[userId] = !updatedState[userId] || false;
+      updatedState[userId.userprofile_id] = !updatedState[userId.userprofile_id] || false;
       return updatedState;
     });
   };
