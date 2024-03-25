@@ -12,6 +12,7 @@ import Goals from "./Pages/Goals";
 import NewGoal from "./Components/NewGoal";
 import HiveChat from "./Pages/HiveChat";
 import FindBuddy from "./Pages/FindBuddy";
+import GoalProfile from "./Components/GoalProfile";
 
 //Components
 import NavBar from "./Components/NavBar";
@@ -133,9 +134,8 @@ function App() {
                 user={user}
                 token={token}/>}
               />
-
-//           <Route path="/interface" element={<InterFace />} />
-
+              <Route path="/goalprofile"
+              element={<GoalProfile/>}/>
         </Routes>
       </Router>
     </div>
