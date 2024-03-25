@@ -21,6 +21,10 @@ import NewProfile from "./Components/NewProfile";
 
 import "./App.css";
 import InterFace from "./Pages/InterFace";
+import Dash from "./Pages/DashBoard";
+import Feed from "./Pages/Feed";
+import GetCurrentGoals from "./Pages/CurrentGoals";
+import FriendRequest from "./Pages/Friends";
 
 function App() {
   const [user, setUser] = useState(
@@ -40,7 +44,12 @@ function App() {
       <Router>
         <NavBar navBar={navBar} setNavBar={setNavBar} />
         <Routes>
+
+          {/* <Route path="/" element={<Home user={user} token={token} />} /> */}
+          <Route path="/profile" element={<UserProfile />} />
+
           <Route path="/" element={<Home user={user} token={token} />} />
+
           <Route
             path="/login"
             element={
@@ -125,6 +134,12 @@ function App() {
           path="/interface"
           element={<InterFace/>}
           />
+
+          <Route path="/" element={<Dash/>}/>
+          <Route path="/feed" element={<Feed/>}/>
+          <Route path="/currentgoals" element={<GetCurrentGoals/>}/>
+          <Route path="friendrequests" element ={<FriendRequest/>}/>
+
            <Route
             path="/findbuddy"
             element={
@@ -136,6 +151,7 @@ function App() {
               />
               <Route path="/goalprofile"
               element={<GoalProfile/>}/>
+
         </Routes>
       </Router>
     </div>
