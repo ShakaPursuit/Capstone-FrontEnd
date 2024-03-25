@@ -153,29 +153,29 @@ const GoalProfile = () => {
   );
 };
 
-//     return (
-// //         <div>
-// //             <div class="tbg">
-// //   <div class="theader">
-// //     <i class="fa fa-cog" aria-hidden="true"></i>
-// //     <i class="fa fa-comments" aria-hidden="true"></i>
-// //     <div class="tlogo">
-// //       <img src="src/assets/pf.png" alt="Tinder Logo" title="Tinder Logo" />
-// //     </div>
-// //   </div>
-// //   <div class="tbgwrap">
-// //     <div class="tphoto">
-// //       <img src="public/profile1.png" title="tphoto" alt="Tinder Photo" />
-// //       <div class="tname">John Doe, <span class="age">27</span></div>
-// //     </div>
-// //     <div class="tcontrols">
-// //       <div class="tno"><i class="fa fa-times" aria-hidden="true"></i></div>
-// //       <div class="tyes"><i class="fa fa-heart" aria-hidden="true"></i></div>
-// //     </div>
-// //   </div>
-// //   <div class="credit"><a href="http://themakery.jcink.net"></a></div>
-// // </div>
-// //         </div>
+    // return (
+//         <div>
+//             <div class="tbg">
+//   <div class="theader">
+//     <i class="fa fa-cog" aria-hidden="true"></i>
+//     <i class="fa fa-comments" aria-hidden="true"></i>
+//     <div class="tlogo">
+//       <img src="src/assets/pf.png" alt="Tinder Logo" title="Tinder Logo" />
+//     </div>
+//   </div>
+//   <div class="tbgwrap">
+//     <div class="tphoto">
+//       <img src="public/profile1.png" title="tphoto" alt="Tinder Photo" />
+//       <div class="tname">John Doe, <span class="age">27</span></div>
+//     </div>
+//     <div class="tcontrols">
+//       <div class="tno"><i class="fa fa-times" aria-hidden="true"></i></div>
+//       <div class="tyes"><i class="fa fa-heart" aria-hidden="true"></i></div>
+//     </div>
+//   </div>
+//   <div class="credit"><a href="http://themakery.jcink.net"></a></div>
+// </div>
+//          </div>
 //     );
 
 export default GoalProfile;

@@ -11,7 +11,7 @@ import ProfileSettings from "./Pages/ProfileSettings";
 import Goals from "./Pages/Goals";
 import NewGoal from "./Components/NewGoal";
 import HiveChat from "./Pages/HiveChat";
-import FindBuddy from "./Pages/FindBuddy";
+// import FindBuddy from "./Pages/FindBuddy";
 import GoalProfile from "./Components/GoalProfile";
 
 //Components
@@ -59,7 +59,8 @@ function App() {
           {/* <Route path="/goals" element={<Goals />} /> */}
           <Route path="/settings" element={<ProfileSettings />} />
           <Route path="/hivechat" element={<HiveChat />} />
-          <Route path="/findbuddy" element={<FindBuddy />} />
+          <Route path="/goalprofile" element={<GoalProfile />} />
+          {/* <Route path="/findbuddy" element={<FindBuddy />} /> */}
           <Route path="/accountsettings" element={<AccountSettings />} />
           <Route
             path="/userProfile"
@@ -125,7 +126,7 @@ function App() {
           path="/interface"
           element={<InterFace/>}
           />
-           <Route
+           {/* <Route
             path="/findbuddy"
             element={
               <ProtectedRoute
@@ -133,8 +134,8 @@ function App() {
                 isAuthenticated={!!user && !!token}
                 user={user}
                 token={token}/>}
-              />
-              <Route path="/goalprofile"
+              /> */}
+              <Route path="/findbuddy"
               element={<GoalProfile/>}/>
         </Routes>
       </Router>
