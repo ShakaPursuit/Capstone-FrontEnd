@@ -1,0 +1,33 @@
+.userprofile-container {
+    padding: 20px;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .stat {
+    text-align: center;
+  }
+  
+  /* Add any additional styling as needed */
+  

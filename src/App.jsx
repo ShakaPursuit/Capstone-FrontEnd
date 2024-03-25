@@ -16,6 +16,8 @@ import FindBuddy from "./Pages/FindBuddy";
 //Components
 import NavBar from "./Components/NavBar";
 import AccountSettings from "./Components/AccountSettings";
+import NewProfile from "./Components/NewProfile";
+
 import "./App.css";
 import InterFace from "./Pages/InterFace";
 
@@ -30,7 +32,7 @@ function App() {
   const [navBar, setNavBar] = useState(false);
   const isAuthenticated = user && token;
 
-  console.log(user);
+  // console.log(user);
 
   return (
     <div className="app">
@@ -38,17 +40,6 @@ function App() {
         <NavBar navBar={navBar} setNavBar={setNavBar} />
         <Routes>
           <Route path="/" element={<Home user={user} token={token} />} />
-          <Route
-            path="/profile"
-            element={
-              <UserProfile
-                setUser={setUser}
-                setToken={setToken}
-                user={user}
-                token={token}
-              />
-            }
-          />
           <Route
             path="/login"
             element={
@@ -70,11 +61,24 @@ function App() {
           <Route path="/findbuddy" element={<FindBuddy />} />
           <Route path="/accountsettings" element={<AccountSettings />} />
           <Route
+            path="/userProfile"
+            element={
+              <ProtectedRoute
+                element={UserProfile}
+                isAuthenticated={!!isAuthenticated}
+                setUser={setUser}
+                setToken={setToken}
+                user={user}
+                token={token}
+              />
+            }
+          />
+          <Route
             path="/goals"
             element={
               <ProtectedRoute
                 element={Goals}
-                isAuthenticated={isAuthenticated}
+                isAuthenticated={!!isAuthenticated}
                 user={user}
                 token={token}
               />
@@ -103,16 +107,19 @@ function App() {
             }
           />
           <Route
-            path="/newProfile"
+            path="/profiles/newProfile"
             element={
               <ProtectedRoute
-                // element={NewProfile}
+                element={NewProfile}
                 isAuthenticated={!!user && !!token}
+                // setUser={setUser}
+                // setToken={setToken}
                 user={user}
                 token={token}
               />
             }
           />
+
           <Route
           path="/interface"
           element={<InterFace/>}
@@ -126,6 +133,9 @@ function App() {
                 user={user}
                 token={token}/>}
               />
+
+//           <Route path="/interface" element={<InterFace />} />
+
         </Routes>
       </Router>
     </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/GH_Logo.png";
-import "./Signup.css"
+import "./Signup.css";
 
 const Signup = ({ setUser, setToken }) => {
   const API = import.meta.env.VITE_BASE_URL;
@@ -35,12 +35,14 @@ const Signup = ({ setUser, setToken }) => {
         if (res.user.userprofile_id) {
           setUser(res.user);
           setToken(res.token);
+          localStorage.setItem("user", JSON.stringify(res.user));
+          localStorage.setItem("token", JSON.stringify(res.token));
           setFormData(() => ({
             username: "",
             email: "",
             password_hash: "",
           }));
-          // navigate("/newProfile");
+          navigate("/profiles/newProfile");
         } else {
           console.log("The error: ", res);
         }

@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import AccountSettings from "../Components/AccountSettings";
-import Profile from "../assets/profile_icon.png";
+import "./UserProfile.css";
+import Goals from "./Goals";
 
 const UserProfile = ({ setUser, setToken, user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
   const navigate = useNavigate();
-
-  const [profiles, setProfiles] = useState([]);
+  // console.log("The user: ", user);
+  const [profiles, setProfiles] = useState({});
+  const [selectedGoals, setSelectedGoals] = useState(false);
+  // const [goals, setGoals] = useState({});
 
   const handleLogout = () => {
     setUser(null);
@@ -28,7 +30,7 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
         .then((res) => res.json())
         .then((res) => {
           setProfiles(res);
-          console.log("The response from fetch: ", res);
+          // console.log("The response from fetch: ", res);
         });
     } catch (error) {
       console.log(error);
@@ -39,31 +41,58 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
     fetchData();
   }, []);
 
-  console.log("useState: ", profiles.email);
+  // console.log("user obj:", profiles);
 
   return (
     <div className="userprofile-container">
-      <h1>This is the Profile Page!</h1>
-      <Button
-        variant="outline-light"
-        onClick={handleLogout}
-        size="sm"
-        style={{ color: "black" }}
-      >
-        Log Out
-      </Button>
-
-      <div>
-
+      {/* <h1>This is the Profile Page!</h1> */}
+      <div className="top-bar">
+        <Button
+          variant="outline-light"
+          onClick={handleLogout}
+          size="sm"
+          style={{ color: "black" }}
+        >
+          Log Out
+        </Button>
       </div>
 
-      {/* {profiles.map((user) => {
-        return (
-          <div key={user.userprofile_id}>
-            <h1>{user.firstname}</h1>
-          </div>
-        );
-      })} */}
+      <div className="profile-header">
+        <img src={profiles.profile_img} alt="Profile Image" />
+        <h2>
+          {profiles.firstname} {profiles.lastname}
+        </h2>
+        <h4>{`@${profiles.username}`}</h4>
+        <p>Age: {profiles.age}</p>
+        <p>Gender: {profiles.gender}</p>
+        <p>
+          Bio: <br />
+          {profiles.bio}
+        </p>
+      </div>
+
+      <div className="stats">
+        <div className="stat">
+          <button onClick={() => setSelectedGoals(false)}>Active Goals</button>
+          <p>{/* Add number of friends */}</p>
+        </div>
+        <div className="stat">
+          <button onClick={() => setSelectedGoals(true)}>
+            Completed Goals
+          </button>
+          <p>{/* Add number of posts */}</p>
+        </div>
+        <div className="stat">
+          <h3></h3>
+          <p>{/* Add number of completed goals */}</p>
+        </div>
+      </div>
+
+      {!selectedGoals ? (
+        <Goals user={user} token={token} />
+      ) : (
+        <span>List of Completed Goals</span>
+      )}
     </div>
   );
 };
