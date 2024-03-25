@@ -12,6 +12,7 @@ import Goals from "./Pages/Goals";
 import NewGoal from "./Components/NewGoal";
 import HiveChat from "./Pages/HiveChat";
 import FindBuddy from "./Pages/FindBuddy";
+import GoalProfile from "./Components/GoalProfile";
 
 //Components
 import NavBar from "./Components/NavBar";
@@ -119,7 +120,22 @@ function App() {
               />
             }
           />
-          <Route path="/interface" element={<InterFace />} />
+
+          <Route
+          path="/interface"
+          element={<InterFace/>}
+          />
+           <Route
+            path="/findbuddy"
+            element={
+              <ProtectedRoute
+                element={FindBuddy}
+                isAuthenticated={!!user && !!token}
+                user={user}
+                token={token}/>}
+              />
+              <Route path="/goalprofile"
+              element={<GoalProfile/>}/>
         </Routes>
       </Router>
     </div>
