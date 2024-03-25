@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const EditGoal = ({ user, token, goalID }) => {
+const EditGoal = ({ user, token, goalID, onCancel }) => {
   const API = import.meta.env.VITE_BASE_URL;
   const [interests, setInterests] = useState([]);
   const [goalForm, setGoalForm] = useState({
@@ -10,15 +10,19 @@ const EditGoal = ({ user, token, goalID }) => {
     userprofile_id: user.userprofile_id,
     interest_id: user.interest_id,
   });
-  // console.log(goalID)
+  console.log(goalForm);
+
+  //   const handleInputChange = (event) => {
+  //     const { name, value } = event.target;
+
+  //     setGoalForm((prev) => ({
+  //       ...prev,
+  //       [name]: value,
+  //     }));
+  //   };
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target;
-
-    setGoalForm((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setGoalForm({ ...goalForm, [event.target.id]: event.target.value });
   };
 
   const handleSubmit = (event) => {
@@ -35,6 +39,7 @@ const EditGoal = ({ user, token, goalID }) => {
       .then((res) => {
         console.log(res);
         setGoalForm(res);
+        window.location.reload();
       })
       .catch((error) => console.log(error));
   };
@@ -85,10 +90,9 @@ const EditGoal = ({ user, token, goalID }) => {
   }, []);
   return (
     <div>
-      {/* <form onSubmit={handleSubmit} className="form-container">
+      <form onSubmit={handleSubmit} className="form-container">
         <div className="form-field">
           <label htmlFor="name">Goal Name:</label>
-          <br />
           <input
             value={goalForm.name}
             onChange={handleInputChange}
@@ -99,36 +103,37 @@ const EditGoal = ({ user, token, goalID }) => {
           />
         </div>
         <br />
-        <br />
         <div className="form-field">
           <label htmlFor="interests">Select an Interest:</label>
           <br />
           <select
-            value={interests.interest_id}
+            value={goalForm.interest_id}
             onChange={handleInputChange}
             id="interest_id"
             required
           >
             <option value="">Select an Interests</option>
             {interests.map(({ interest_id, name }) => {
-              return <option value={interest_id}>{name}</option>;
+              return (
+                <option key={interest_id} value={interest_id}>
+                  {name}
+                </option>
+              );
             })}
           </select>
         </div>
-        <br />
         <br />
         <div className="form-field">
           <label htmlFor="tartgetDate">Target Date:</label>
           <br />
           <input
             type="date"
-            value={goalForm.target_date}
+            value={goalForm.target_date.slice(0, 10)}
             onChange={handleInputChange}
             id="target_date"
             required
           />
         </div>
-        <br />
         <br />
         <div className="form-field">
           <label htmlFor="description">Goal Description:</label>
@@ -140,9 +145,21 @@ const EditGoal = ({ user, token, goalID }) => {
           />
         </div>
         <br />
-        <br />
-        <button type="submit">Create Goal</button>
-      </form> */}
+        <div className="form-buttons">
+          <button type="submit">Submit</button>
+          <button
+            type="button"
+            onClick={() => {
+              handleDelete();
+            }}
+          >
+            Delete
+          </button>
+          <button type="button" onClick={() => onCancel()}>
+            Cancel
+          </button>
+        </div>
+      </form>
     </div>
   );
 };
