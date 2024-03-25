@@ -163,7 +163,7 @@ const FindBuddy = () => {
   const [interest, setInterest] = useState([]);
   const { id } = useParams();
   const [currentIndex, setCurrentIndex] = useState(0);
-
+   
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -224,6 +224,7 @@ const FindBuddy = () => {
     onSwipedRight: goToNextCard,
     onSwipedLeft: goToPreviousCard
   });
+  
 
   const SwipeableComponent = () => {
     return (
@@ -231,7 +232,7 @@ const FindBuddy = () => {
         {users.map((user, index) => {
           const isCurrentCard = index === currentIndex;
           return (
-            <div className={`user-card${isCurrentCard ? " active" : ""}`} key={index} {...handlers}>
+            <div className={`user-card${isCurrentCard ? " active" : ""}`} key={index} {...handlers} >
               <p>{user.username}</p>
               <img id="feed" src={user.profile_img} alt="" />
               <div className="user-goals">
@@ -254,12 +255,17 @@ const FindBuddy = () => {
       </div>
     );
   };
+  
+
+  
+    
+     
 
   return (
     <>
       <div className="carousel-container">
         <h1>Find a Buddy</h1>
-        <SwipeableComponent />
+        <SwipeableComponent  />
        
       </div>
     </>
