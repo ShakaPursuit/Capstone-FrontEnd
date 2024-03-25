@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Form from "react-bootstrap/Form";
+import "./newProfile.css";
 
-const NewProfile = ({ user, token, }) => {
+const NewProfile = ({ user, token }) => {
   // console.log("user: ",user)
   const API = import.meta.env.VITE_BASE_URL;
 
@@ -49,6 +51,9 @@ const NewProfile = ({ user, token, }) => {
   return (
     <div className="new-profile">
       <form onSubmit={handleSubmit}>
+        <br />
+        <h2 id="heading">Basic Profile Setup</h2>
+        <br />
         <label>
           First Name:
           <input
@@ -62,7 +67,6 @@ const NewProfile = ({ user, token, }) => {
         </label>
 
         <br />
-        <br />
         <label>
           Last Name:
           <input
@@ -74,8 +78,6 @@ const NewProfile = ({ user, token, }) => {
             required
           />
         </label>
-
-        <br />
         <br />
         <label>
           Age:
@@ -90,9 +92,6 @@ const NewProfile = ({ user, token, }) => {
             required
           />
         </label>
-
-        <br />
-        <br />
         <label>
           Gender:
           <select
@@ -105,7 +104,6 @@ const NewProfile = ({ user, token, }) => {
             <option value="Female">Female</option>
           </select>
         </label>
-        <br />
         <br />
         <label>
           Bio:
@@ -122,5 +120,4 @@ const NewProfile = ({ user, token, }) => {
     </div>
   );
 };
-
 export default NewProfile;

@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import "./UserProfile.css";
 import Goals from "./Goals";
+import profilePic from "../assets/profile-male-blue.png";
 
 const UserProfile = ({ setUser, setToken, user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
@@ -48,24 +49,25 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
       {/* <h1>This is the Profile Page!</h1> */}
       <div className="top-bar">
         <Button
+          className="css-button-gradient--5"
           variant="outline-light"
           onClick={handleLogout}
           size="sm"
-          style={{ color: "black" }}
+          style={{ color: "white" }}
         >
           Log Out
         </Button>
       </div>
 
       <div className="profile-header">
-        <img src={profiles.profile_img} alt="Profile Image" />
-        <h2>
+        <img src={profilePic} alt="Profile Image" />
+        <h4>
           {profiles.firstname} {profiles.lastname}
-        </h2>
-        <h4>{`@${profiles.username}`}</h4>
+        </h4>
+        <h6>{`@${profiles.username}`}</h6>
         <p>Age: {profiles.age}</p>
         <p>Gender: {profiles.gender}</p>
-        <p>
+        <p id="bio">
           Bio: <br />
           {profiles.bio}
         </p>
@@ -73,11 +75,19 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
 
       <div className="stats">
         <div className="stat">
-          <button onClick={() => setSelectedGoals(false)}>Active Goals</button>
+          <button
+            className="css-button-3d--sky"
+            onClick={() => setSelectedGoals(false)}
+          >
+            Active Goals
+          </button>
           <p>{/* Add number of friends */}</p>
         </div>
         <div className="stat">
-          <button onClick={() => setSelectedGoals(true)}>
+          <button
+            className="css-button-3d--sand"
+            onClick={() => setSelectedGoals(true)}
+          >
             Completed Goals
           </button>
           <p>{/* Add number of posts */}</p>
