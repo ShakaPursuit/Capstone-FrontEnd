@@ -1,3 +1,73 @@
+@media (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .nav {
+    display: grid;
+    min-height: 10vh;
+    max-width: 767px;
+    margin: 0 auto;
+    grid-template-areas: "l l l l l";
+  }
+
+  Link {
+    grid-area: l;
+  }
+}
+
+/* Adjustments for responsive layout */
+@media (min-width: 768px) {
+  .nav {
+    background-color: var(--GHBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 16vw;
+    /* font-size:xx-small; */
+    /* padding: 10px; */
+  }
+
+  .navbar-link {
+    display: flex;
+    column-gap: 10px;
+    width: 85%;
+    align-items: center;
+    text-decoration: none;
+  }
+  .navbar-link span {
+    font-size: 15px;
+    color: white;
+    /* font-size:xx-small; */
+  }
+  .navbar-link img {
+    height: 75px;
+    max-width: 90%;
+    border: 1px solid black;
+    border-radius: 15px;
+  }
+
+  .navbar-link:hover {
+    background-color: var(--GHGreen);
+    border-radius: 20px;
+    padding: 5px;
+  }
+
+  .navbar-close {
+    all: unset;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 30px;
+  }
+
+  .navbar-close svg {
+    height: 2em;
+    width: 2em;
+  }
+}
+
 /* UserProfile.css */ /*
 .userprofile-container {
   padding: 20px;
@@ -105,14 +175,15 @@
   /* Add any additional styling as needed */
 
 /* UserProfile.css */
+/*
 .userprofile-container {
   width: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center; /* Center items horizontally */
-  text-align: center; /* Center text within each row */
-}
+/*text-align: center; /* Center text within each row */
+/*}
 
 .top-bar {
   display: flex;
@@ -161,3 +232,4 @@
   line-height: 2;
   padding-top: 25px;
 }
+*/

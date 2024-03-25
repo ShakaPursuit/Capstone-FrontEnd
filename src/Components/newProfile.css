@@ -1,65 +1,71 @@
-.new-profile {
-  max-width: 400px;
-  margin: 0 auto;
-}
+@media (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
 
-form {
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+  .new-profile {
+    max-width: 400px;
+    margin: 0 auto;
+  }
 
-label {
-  display: block;
-  margin-bottom: 10px;
-}
+  form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
 
-input[type="text"],
-input[type="number"],
-select,
-textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
 
-input[type="submit"] {
-  width: 100%;
-  background-color: #80b192;
-  color: #fff;
-  border: none;
-  padding: 10px 0;
-  border-radius: 5px;
-  cursor: pointer;
-}
+  input[type="text"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
 
-input[type="submit"]:hover {
-  background-color: #0056b3;
-}
+  input[type="submit"] {
+    width: 100%;
+    background-color: #80b192;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
-label {
-  display: inline-block;
-  margin-right: 10px;
-}
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
 
-input,
-select,
-textarea {
-  margin-bottom: 10px;
-}
+  label {
+    display: inline-block;
+    margin-right: 10px;
+  }
 
-input[type="submit"] {
-  margin-top: 20px;
-}
+  input,
+  select,
+  textarea {
+    margin-bottom: 10px;
+  }
 
-form h2 {
-  text-align: center;
-  color: #0056b3;
-}
+  input[type="submit"] {
+    margin-top: 20px;
+  }
 
+  form h2 {
+    text-align: center;
+    color: #0056b3;
+  }
+}
 /* .form {
   padding: 20px 0px 0px 0px;
 }
