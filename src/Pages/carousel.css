@@ -24,7 +24,7 @@
   padding: 20px;
   background-color: #f0f0f0;
   border: 1px solid #ccc;
-  height: 700px;
+  height: 400px;
   text-align: center;
   align-items: center;
   justify-content: space-evenly;
@@ -34,10 +34,7 @@
 
 .user-card.active {
   display: block;
-  /* background-color: var(--GHGreen); */
-  background-repeat: no-repeat
-  ;
-  /* background-size: cover; */
+  background-color: var(--GHGreen);
 }
 
 .user-card p {
