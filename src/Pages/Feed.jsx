@@ -78,7 +78,7 @@ const Feed = () => {
     <>
       <div className="scroll2">
       <div class="bee-container">
-  <img id="feed-logo"src="../public/GH_Logo.png" alt="Bee" class="bee" />
+  <img id="feed-logo"src="/GH_Logo.png" alt="Bee" class="bee" />
 </div>
    <h1>Community Feed</h1>
         {users.map((user, index) => {

@@ -11,20 +11,7 @@ div.scroll {
   overflow-y: auto;
   background-color:var(--GHBlue);
   padding-bottom: 60px;
-    /* background-color: var(--GHBlue);
-    padding: 20px;
-    height: 100vh;
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-  
-  align-items: center;
-  padding: 40px;
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
-  overflow-y: auto;
-  padding-bottom: 60px; */
+   
   }
   
   #topbar {
