@@ -37,7 +37,7 @@ const NavBar = ({ navBar, setNavBar }) => {
         <span>Find Friends</span>
       </Link>
 
-      <Link className="navbar-link" to="/goals">
+      <Link className="navbar-link" to="/goals/new">
         <img src={CreateGoal} alt="" />
         <span>Goals</span>
       </Link>
@@ -47,7 +47,7 @@ const NavBar = ({ navBar, setNavBar }) => {
         <span>HiveChat</span>
       </Link>
 
-      <Link className="navbar-link" to="/profile">
+      <Link className="navbar-link" to="/userProfile">
         <img src={ProfileIcon} alt="" />
         <span>Profile</span>
       </Link>
