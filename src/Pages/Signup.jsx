@@ -52,7 +52,7 @@ const Signup = ({ setUser, setToken }) => {
 
   return (
     <div className="signup">
-      {/* <img className="logo" src={logo} /> */}
+      <img className="logo" src={logo} />
       <form className="form" onSubmit={handleSubmit}>
         <input
           type="text"

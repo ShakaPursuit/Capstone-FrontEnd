@@ -1,15 +1,17 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import GoalHive from "../assets/GH_Nobg.png";
+import GoalHive from "../assets/gh_colorful_logo.png";
 import ProfileIcon from "../assets/profile_icon.png";
-import HiveChat from "../assets/hivechat_icon.png";
-import Buddies from "../assets/find_a_buddy_icon.png";
-import CreateGoal from "../assets/GH_create_goal.png";
+import HiveChat from "../assets/chat_icon.png";
+import Buddies from "../assets/find_buddy.png";
+import CreateGoal from "../assets/goals_icon.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import "./Navbar2.css";
 
 const NavBar = ({ navBar, setNavBar }) => {
-  
+
+  const location = useLocation();
+  // console.log(location);
 
   useEffect(() => {
     // setNavBar(false);
@@ -23,18 +25,9 @@ const NavBar = ({ navBar, setNavBar }) => {
     }
   }, [location.pathname]);
 
- 
-
-  
-
-
-
-
-
-  return navBar ?  (
+  return navBar ? (
     <nav className="nav">
       <Link className="navbar-link" to="/">
-  
         <img id="goalhive-icon" src={GoalHive} alt="" />
         <span>Home</span>
       </Link>
@@ -65,14 +58,11 @@ const NavBar = ({ navBar, setNavBar }) => {
       </Link>
 
       <button id="navbar-close"
-
-
         onClick={() => {
           setNavBar(!navBar);
         }}
-        onMouseEnter={()=>{
-          setNavBar(!navBar)
-          
+        onMouseEnter={() => {
+          setNavBar(!navBar);          
          }}
       >
         ↩
@@ -83,14 +73,10 @@ const NavBar = ({ navBar, setNavBar }) => {
       className="navbar-close"
       onClick={() => {
         setNavBar(!navBar);
-        
       }}
-      
-           onMouseEnter={()=>{
-            setNavBar(!navBar)
-           }}
-         
-      
+      onMouseEnter={() => {
+        setNavBar(!navBar);
+      }}
     >
       <  RxHamburgerMenu className="hamburger" onMouseEnter={()=>{ setTimeout(() => {
         setNavBar(false);
