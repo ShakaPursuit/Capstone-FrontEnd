@@ -20,8 +20,10 @@ const Dash = () => {
             <header><h1>Goal Hive Dash</h1></header>
 
 
-
+            <Link to="/goals/new">
+            
             <button id="create-goal">CREATE GOAL</button>
+            </Link>
             <h2>
 
             </h2>

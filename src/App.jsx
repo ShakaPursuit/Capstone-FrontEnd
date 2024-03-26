@@ -97,13 +97,16 @@ function App() {
           />
           <Route
             path="/goals/new"
-            element={
-              <ProtectedRoute
-                element={NewGoal}
-                isAuthenticated={!!user && !!token}
-                user={user}
-                token={token}
-              />
+            element=
+            
+            {
+              // <ProtectedRoute
+                // element=
+                <NewGoal/>
+                // isAuthenticated={!!user && !!token}
+                // user={user}
+                // token={token}
+              // />
             }
           />
           <Route

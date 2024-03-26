@@ -22,15 +22,15 @@ div.scroll {
   }
   
   header {
-    background-color: #222;
-    color: white;
+    /* background-color: #222; */
+    color: black;
     padding: 20px;
     text-align: center;
   }
   
   #create-goal {
     background-color: #4caf50;
-    color: white;
+    color: black;
     border: none;
     padding: 10px 20px;
     margin-bottom: 20px;
@@ -77,13 +77,14 @@ div.scroll {
   }
   
   #dash-logo button {
-    background-color: #333;
-    color: white;
+    background-color: #33333351;
+    color: black;
     border: none;
     padding: 10px 20px;
     margin-top: 10px; 
     cursor: pointer;
     height: 70px;
+    border: 1px solid var(--GHGreen);
   }
   
   #dash-logo button:last-child {
@@ -91,7 +92,7 @@ div.scroll {
   }
   
   #dash-logo button:hover {
-    background-color: #222;
+    background-color:var(--GHGreen);
   } 
 #dash-logo2{
 
