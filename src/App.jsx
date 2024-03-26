@@ -11,7 +11,7 @@ import ProfileSettings from "./Pages/ProfileSettings";
 import Goals from "./Pages/Goals";
 import NewGoal from "./Components/NewGoal";
 import HiveChat from "./Pages/HiveChat";
-import FindBuddy from "./Pages/FindBuddy";
+// import FindBuddy from "./Pages/FindBuddy";
 import GoalProfile from "./Components/GoalProfile";
 
 //Components
@@ -21,6 +21,10 @@ import NewProfile from "./Components/NewProfile";
 
 import "./App.css";
 import InterFace from "./Pages/InterFace";
+import Dash from "./Pages/DashBoard";
+import Feed from "./Pages/Feed";
+import GetCurrentGoals from "./Pages/CurrentGoals";
+import FriendRequest from "./Pages/Friends";
 
 function App() {
   const [user, setUser] = useState(
@@ -40,7 +44,12 @@ function App() {
       <Router>
         <NavBar navBar={navBar} setNavBar={setNavBar} />
         <Routes>
-          <Route path="/" element={<Home user={user} token={token} />} />
+
+          {/* <Route path="/" element={<Home user={user} token={token} />} /> */}
+          <Route path="/profile" element={<UserProfile />} />
+
+          <Route path="/" element={<Dash user={user} token={token} />} />
+
           <Route
             path="/login"
             element={
@@ -59,7 +68,8 @@ function App() {
           {/* <Route path="/goals" element={<Goals />} /> */}
           <Route path="/settings" element={<ProfileSettings />} />
           <Route path="/hivechat" element={<HiveChat />} />
-          <Route path="/findbuddy" element={<FindBuddy />} />
+          {/* <Route path="/goalprofile" element={<GoalProfile />} /> */}
+          {/* <Route path="/findbuddy" element={<FindBuddy />} /> */}
           <Route path="/accountsettings" element={<AccountSettings />} />
           <Route
             path="/userProfile"
@@ -125,17 +135,22 @@ function App() {
           path="/interface"
           element={<InterFace/>}
           />
-           <Route
-            path="/findbuddy"
-            element={
-              <ProtectedRoute
-                element={FindBuddy}
-                isAuthenticated={!!user && !!token}
-                user={user}
-                token={token}/>}
-              />
-              <Route path="/goalprofile"
-              element={<GoalProfile/>}/>
+
+          
+
+
+          <Route path="/" element={<Dash/>}/>
+          <Route path="/feed" element={<Feed/>}/>
+          <Route path="/currentgoals" element={<GetCurrentGoals/>}/>
+          <Route path="/friendrequests" element ={<FriendRequest/>}/>
+
+            <Route
+path="/findbuddy"
+  element ={<GoalProfile/>}
+  // isAuthenticated={!!user && !!token}
+  // user={user}
+  // token={token}
+ />
         </Routes>
       </Router>
     </div>

@@ -6,17 +6,22 @@ import HiveChat from "../assets/chat_icon.png";
 import Buddies from "../assets/find_buddy.png";
 import CreateGoal from "../assets/goals_icon.png";
 import { RxHamburgerMenu } from "react-icons/rx";
-import "./Navbar.css";
+import "./Navbar2.css";
 
 const NavBar = ({ navBar, setNavBar }) => {
+
   const location = useLocation();
   // console.log(location);
+
   useEffect(() => {
     // setNavBar(false);
-    if (location.pathname === "/") {
-      setNavBar(true);
-    } else {
-      setNavBar(false);
+    if(location.pathname === "/"||location.pathname === "/dash"){
+      setNavBar(true)
+      setTimeout(() => {
+        setNavBar(false);
+      }, 10000); 
+    } else{
+      setNavBar(false)
     }
   }, [location.pathname]);
 
@@ -32,10 +37,15 @@ const NavBar = ({ navBar, setNavBar }) => {
         <span>Find Friends</span>
       </Link>
 
+
+      {/* <Link className="navbar-link" to="/goals">
+        <img id="createGoal-icon" src={CreateGoal} alt="" />
+
       <Link className="navbar-link" to="/goals/new">
         <img src={CreateGoal} alt="" />
+
         <span>Goals</span>
-      </Link>
+      </Link> */}
 
       <Link className="navbar-link" to="/hivechat">
         <img src={HiveChat} alt="" />
@@ -46,13 +56,14 @@ const NavBar = ({ navBar, setNavBar }) => {
         <img src={ProfileIcon} alt="" />
         <span>Profile</span>
       </Link>
-      <button
+
+      <button id="navbar-close"
         onClick={() => {
           setNavBar(!navBar);
         }}
         onMouseEnter={() => {
-          setNavBar(!navBar);
-        }}
+          setNavBar(!navBar);          
+         }}
       >
         ↩
       </button>
@@ -67,7 +78,9 @@ const NavBar = ({ navBar, setNavBar }) => {
         setNavBar(!navBar);
       }}
     >
-      <RxHamburgerMenu className="hamburger" />
+      <  RxHamburgerMenu className="hamburger" onMouseEnter={()=>{ setTimeout(() => {
+        setNavBar(false);
+      }, 6000); }} />
     </button>
   );
 };
