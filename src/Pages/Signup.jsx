@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/GH_Logo.png";
-import "./Signup.css";
-
+import "../Pages/Signup.css"
 const Signup = ({ setUser, setToken }) => {
   const API = import.meta.env.VITE_BASE_URL;
   const navigate = useNavigate();
@@ -51,45 +50,47 @@ const Signup = ({ setUser, setToken }) => {
   };
 
   return (
-    <div className="signup">
-      <img className="logo" src={logo} />
-      <form className="form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Enter Username"
-          name="username"
-          value={formData.username}
-          onChange={handleInputChange}
-          required
-        />
-        <br />
-        <br />
-        <input
-          type="email"
-          placeholder="Enter Email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          required
-        />
-        <br />
-        <br />
-        <input
-          type="password"
-          placeholder="Enter Password"
-          name="password_hash"
-          value={formData.password_hash}
-          onChange={handleInputChange}
-          required
-        />
-        <br />
-        <br />
-        <button type="submit">CREATE ACCOUNT</button>
-      </form>
-      <p>
-        Already have an account? <Link to="/login">Login</Link>
-      </p>
-    </div>
+    <>
+      <div className="signup-container">
+        <img className="signup-logo" src={logo} />
+        <form className="form" onSubmit={handleSubmit}>
+          <input
+          className="text-wrapper-2"
+            type="text"
+            placeholder="Enter Username"
+            name="username"
+            value={formData.username}
+            onChange={handleInputChange}
+            required
+          />
+          {/* <br />
+          <br /> */}
+          <input
+          className="text-wrapper-3"
+            type="email"
+            placeholder="Enter Email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+          />
+          {/* <br />
+          <br /> */}
+          <input
+          className="text-wrapper-4"
+            type="password"
+            placeholder="Enter Password"
+            name="password_hash"
+            value={formData.password_hash}
+            onChange={handleInputChange}
+            required
+          />
+          {/* <br />
+          <br /> */}
+          <button className="signup-create" type="submit">CREATE ACCOUNT</button>
+        </form>
+      </div>
+    </>
   );
 };
 

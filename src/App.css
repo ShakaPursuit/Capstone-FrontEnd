@@ -76,7 +76,7 @@ img.quote {
   left: 104px;
   letter-spacing: var(--regular-14-letter-spacing);
   line-height: var(--regular-14-line-height);
-  position: absolute;
+
   top: 331px;
   width: 158px;
   margin-left: 15px;
@@ -84,7 +84,7 @@ img.quote {
   border-left: none;
   border-right: none;
 
-  ;
+  
 }
 
 .frame .text-wrapper-2:hover {
@@ -99,11 +99,11 @@ img.quote {
   font-size: var(--regular-14-font-size);
   font-style: var(--regular-14-font-style);
   font-weight: var(--regular-14-font-weight);
-  left: 107px;
+
   letter-spacing: var(--regular-14-letter-spacing);
   line-height: var(--regular-14-line-height);
-  position: absolute;
-  top: 408px;
+  /* position: absolute; */
+
   width: 158px;
   margin-left: 15px;
   border-top: none;
@@ -795,7 +795,7 @@ img#single-photo {
 
 .center {
   display: grid;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 #each-goal {
@@ -851,19 +851,6 @@ div#user.row {
   height: 100px;
 }
 
-#request {
-  border: 2px solid var(--GHBlue);
-  /* border-bottom: 10px solid var(--GHBlue); */
-  display: flex;
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 10px;
-}
-
-#accept,
-#decline {
-  border-radius: 15px;
-}
 
 #accept:hover {
   background-color: var(--GHGreen);

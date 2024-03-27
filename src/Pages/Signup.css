@@ -1,23 +1,83 @@
-.signup {
-  grid-area: m;
-  /* border: 1px solid green; */
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  align-self: center;
-  align-content: center;
+.signup-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color:var(white);
+    /* padding-bottom: 60px; */
+    justify-content: space-between;
+
 }
 
-/* .signup img { */
-/* height: 50px; */
-/* width: 20%; */
-/* } */
-
-/* .signup p {
-  align-self: flex-end;
-} */
-
-.form {
-  padding-top: 10px;
+.signup-logo{
+    width:200px;
+    height:200px
 }
+
+.signup-container > .text-wrapper-3 {
+    color: #000000;
+    font-family: var(--regular-14-font-family);
+    font-size: var(--regular-14-font-size);
+    font-style: var(--regular-14-font-style);
+    font-weight: var(--regular-14-font-weight);
+    left: 107px;
+    letter-spacing: var(--regular-14-letter-spacing);
+    line-height: var(--regular-14-line-height);
+
+    top: 408px;
+    width: 158px;
+    margin-left: 15px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .signup-container > .text-wrapper-2 {
+    color: #000000;
+    font-family: var(--regular-14-font-family);
+    font-size: var(--regular-14-font-size);
+    font-style: var(--regular-14-font-style);
+    font-weight: var(--regular-14-font-weight);
+    left: 104px;
+    letter-spacing: var(--regular-14-letter-spacing);
+    line-height: var(--regular-14-line-height);
+
+    top: 331px;
+    width: 158px;
+    margin-left: 15px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .text-wrapper-4 {
+    color: #000000;
+    font-family: var(--regular-14-font-family);
+    font-size: var(--regular-14-font-size);
+    font-style: var(--regular-14-font-style);
+    font-weight: var(--regular-14-font-weight);
+    left: 107px;
+    letter-spacing: var(--regular-14-letter-spacing);
+    line-height: var(--regular-14-line-height);
+    position: absolute;
+    top: 408px;
+    width: 158px;
+    margin-left: 15px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 75px;
+  }
+
+  .signup-create{
+    background-color: var(--GHGreen);
+    width:225px;
+    height: 75px;
+    border-radius: 40px;
+    font-weight: bolder;
+    border: 1px solid var(--GHBlue);
+  }

@@ -2,11 +2,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import React from "react";
-import toggle from "../assets/toggle.png";
 import logo from "../assets/GH.png";
 import quote from "../assets/quote.png";
 
-import "./login.css";
+
+import "../Pages/Login.css";
 
 const Login = ({ setUser, setToken, user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
@@ -72,15 +72,16 @@ const Login = ({ setUser, setToken, user, token }) => {
   // }
 
   return (
-    <div className="login">
+    <div className="login-container">
       {/* <img className="updated-logo" src={logo} /> */}
 
       <Form className="form" onSubmit={handleLogin}>
-        <Form.Group className="mb-3" controlId="username">
-          <Form.Label>Username</Form.Label>
+        <Form.Group  controlId="username">
+          <Form.Label >Username</Form.Label>
           <Form.Control
+          className="text-wrapper-2"
             type="text"
-            placeholder="Enter your username"
+         
             name="username"
             value={formData.username}
             onChange={handleInputChange}
@@ -88,11 +89,12 @@ const Login = ({ setUser, setToken, user, token }) => {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="password">
+        <Form.Group  controlId="password">
           <Form.Label>Password</Form.Label>
           <Form.Control
+            className="text-wrapper-3"
             type="password"
-            placeholder="Enter your password"
+           
             name="password_hash"
             value={formData.password_hash}
             onChange={handleInputChange}
@@ -100,7 +102,7 @@ const Login = ({ setUser, setToken, user, token }) => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="login-submit">
           Log in
         </Button>
       </Form>
@@ -132,8 +134,9 @@ const Login = ({ setUser, setToken, user, token }) => {
 
         <button type="submit">LOGIN</button>
       </form> */}
-      <p>
-        Don't have an account? <Link to="/signup">Sign Up</Link>
+      <p >
+   
+        <Link  className="login-signup" to="/signup">Sign Up</Link>
       </p>
     </div>
   );

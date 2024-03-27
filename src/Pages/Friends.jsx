@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from "react";
 import { useParams } from "react-router-dom";
+import "../Pages/Friends.css"
 
 const FriendRequest=({setUser, token, user, setToken})=>{
     const API = import.meta.env.VITE_BASE_URL;
@@ -23,7 +24,7 @@ const FriendRequest=({setUser, token, user, setToken})=>{
       }, [friendRequest]);
 
       return(<>
-      <div>
+      <div className="friendrequests-container">
               <h3> Friend Request</h3>
               {friendRequest.map(request => (
                 <div id='request' key={request.id}>

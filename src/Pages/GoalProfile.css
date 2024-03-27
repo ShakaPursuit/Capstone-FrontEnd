@@ -217,10 +217,10 @@ form{
   font-family: calibri;
 }
 
-body {
+/* body {
   display: flex;
   justify-content: center;
-}
+} */
 
 .swiper-container {
   width: 800px;
