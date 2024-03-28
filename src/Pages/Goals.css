@@ -1,9 +1,5 @@
 .goals-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 5%;
-}
-
-.goalcard{
-    
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5%;
 }

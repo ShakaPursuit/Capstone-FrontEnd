@@ -20,7 +20,9 @@ const GoalCard = ({ user, token, goal }) => {
   }
   return (
     <div className="goalcard">
-      <h2>{goal.name}</h2>
+      <h6>
+        <strong>{goal.name}</strong>
+      </h6>
       <p>{goal.description}</p>
       <p>Target Date: {goal.target_date.slice(0, 10)}</p>
       <button onClick={() => setEditGoal(true)}>edit</button>
