@@ -1,5 +1,5 @@
 .goals-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 5%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5%;
 }

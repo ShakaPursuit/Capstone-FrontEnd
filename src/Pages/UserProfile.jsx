@@ -46,63 +46,53 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
 
   return (
     <div className="userprofile-container">
-      {/* <h1>This is the Profile Page!</h1> */}
-      <div className="top-bar">
+      <img id="profilelogo" src={profilePic} alt="Profile Image" />
+      <div className="profile-header">
+        <h5>
+          {profiles.firstname} {profiles.lastname}
+        </h5>
+        <h6>{`@${profiles.username}`}</h6>
+        <h6>Age: {profiles.age}</h6>
+        <h6>Gender: {profiles.gender}</h6>
+      </div>
+      <div className="css-button-shadow-border--black">
         <Button
-          className="css-button-gradient--5"
-          variant="outline-light"
+          className="css-button-shadow-border--black"
           onClick={handleLogout}
-          size="sm"
           style={{ color: "white" }}
         >
           Log Out
         </Button>
       </div>
-
-      <div className="profile-header">
-        <img src={profilePic} alt="Profile Image" />
-        <h4>
-          {profiles.firstname} {profiles.lastname}
-        </h4>
-        <h6>{`@${profiles.username}`}</h6>
-        <p>Age: {profiles.age}</p>
-        <p>Gender: {profiles.gender}</p>
-        <p id="bio">
+      <div className="bio">
+        <p>
           Bio: <br />
           {profiles.bio}
         </p>
       </div>
-
-      <div className="stats">
-        <div className="stat">
-          <button
-            className="css-button-3d--sky"
-            onClick={() => setSelectedGoals(false)}
-          >
-            Active Goals
-          </button>
-          <p>{/* Add number of friends */}</p>
-        </div>
-        <div className="stat">
-          <button
-            className="css-button-3d--sand"
-            onClick={() => setSelectedGoals(true)}
-          >
-            Completed Goals
-          </button>
-          <p>{/* Add number of posts */}</p>
-        </div>
-        <div className="stat">
-          <h3></h3>
-          <p>{/* Add number of completed goals */}</p>
-        </div>
+      <div className="active">
+        <button
+          className="css-button-3d--sky"
+          onClick={() => setSelectedGoals(false)}
+        >
+          Active Goals
+        </button>
       </div>
-
-      {!selectedGoals ? (
-        <Goals user={user} token={token} />
-      ) : (
-        <span>List of Completed Goals</span>
-      )}
+      <div className="completed">
+        <button
+          className="css-button-3d--sand"
+          onClick={() => setSelectedGoals(true)}
+        >
+          Completed
+        </button>
+      </div>
+      <div className="goals">
+        {!selectedGoals ? (
+          <Goals user={user} token={token} />
+        ) : (
+          <span>List of Completed Goals</span>
+        )}
+      </div>
     </div>
   );
 };

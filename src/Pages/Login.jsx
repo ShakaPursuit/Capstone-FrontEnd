@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import React from "react";
 import toggle from "../assets/toggle.png";
-import logo from "../assets/GH.png";
+import logo from "../assets/GH_Nobg.png";
 import quote from "../assets/quote.png";
 
 import "./login.css";
@@ -73,7 +73,7 @@ const Login = ({ setUser, setToken, user, token }) => {
 
   return (
     <div className="login">
-      {/* <img className="updated-logo" src={logo} /> */}
+      <img id="login-logo" src={logo} style={{ width: 300, height: 400 }} />
 
       <Form className="form" onSubmit={handleLogin}>
         <Form.Group className="mb-3" controlId="username">

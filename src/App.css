@@ -16,11 +16,8 @@
 img.quote {
   width: 175px;
   height: 100px;
-  margin-left: 108px
+  margin-left: 108px;
 }
-
-
-
 
 .frame .div {
   background-color: white;
@@ -28,8 +25,6 @@ img.quote {
   overflow: hidden;
   position: relative;
   width: 430px;
-
-
 }
 
 .frame .div2 {
@@ -39,8 +34,6 @@ img.quote {
   position: relative;
   width: 430px;
   /* width:100%; */
-
-
 }
 
 .frame .toggle-on-instance {
@@ -50,11 +43,6 @@ img.quote {
   top: 486px !important;
   width: 30px !important;
 }
-
-
-
-
-
 
 /* Top Logo */
 
@@ -83,8 +71,6 @@ img.quote {
   border-top: none;
   border-left: none;
   border-right: none;
-
-  ;
 }
 
 .frame .text-wrapper-2:hover {
@@ -125,10 +111,8 @@ img.quote {
   top: 574px;
   width: 308px;
   margin-top: 480px;
-  margin-left: 160px
+  margin-left: 160px;
 }
-
-
 
 .frame .text-wrapper-4 {
   color: #000000;
@@ -146,11 +130,10 @@ img.quote {
   border-top: none;
   border-left: none;
   border-right: none;
-  margin-top: 75px
+  margin-top: 75px;
 }
 
 .create {
-
   margin-left: 125px;
 
   margin-top: 100px;
@@ -168,21 +151,14 @@ img.quote {
   position: absolute;
   top: 745px;
   width: 325px;
-
 }
-
 
 .sign-up {
   margin-bottom: 50px;
   margin-left: 125px;
   width: 150px;
   background-color: rgb(34, 129, 202);
-
-
 }
-
-
-
 
 .frame .text-wrapper-5 {
   -webkit-text-stroke: 1px #000000;
@@ -199,12 +175,9 @@ img.quote {
   width: 266px;
 }
 
-
-.login {
+/* .login {
   background-color: rgb(98, 231, 171);
-}
-
-
+} */
 
 #about {
   height: 200px;
@@ -249,13 +222,11 @@ img.quote {
   border-top: none;
   border-left: none;
   border-right: none;
-
 }
 
 .profile-header {
   font-size: xx-large;
   text-align: left;
-
 }
 
 header#chat.header {
@@ -271,8 +242,6 @@ header#chat.header {
   /* background-color: darkgray; */
   /* background-position: center; */
   /* background-position: left; */
-
-
 }
 
 /* #p-Settings{
@@ -294,12 +263,9 @@ header#chat.header {
   /* margin-left: 100px; */
   margin-top: -300px;
   margin-left: 100px;
-
-
 }
 
 #submit {
-
   background-color: rgba(22, 192, 135, 0.692);
 }
 
@@ -308,8 +274,6 @@ header#chat.header {
   height: auto;
   margin-left: 10px;
   border-radius: 100px;
-
-
 }
 
 #user2 {
@@ -347,14 +311,12 @@ header#chat.header {
 #user1-txt {
   height: 40px;
   position: fixed;
-  margin-left: 50px
+  margin-left: 50px;
 }
 
 #user2-txt {
   margin-left: 150px;
   height: 40px;
-
-
 }
 
 #interaction {
@@ -367,12 +329,10 @@ header#chat.header {
   border-radius: 15px;
 }
 
-
-
 #container {
   margin: 0;
   height: 100vh;
-  overflow: hidden
+  overflow: hidden;
 }
 
 header {
@@ -380,7 +340,7 @@ header {
 }
 
 div#container {
-  color: white
+  color: white;
 }
 
 div.chat-background {
@@ -390,9 +350,11 @@ div.chat-background {
 #user1-send {
   margin-left: 300px;
 }
-div.chat-background{background-color: rgb(0, 0, 255);}
-#user1-send{
-  margin-left:300px;
+div.chat-background {
+  background-color: rgb(0, 0, 255);
+}
+#user1-send {
+  margin-left: 300px;
 
   background-color: rgb(33, 105, 220);
 }
@@ -401,7 +363,6 @@ div.chat-background{background-color: rgb(0, 0, 255);}
   background-color: rgb(49, 235, 49);
   margin-top: 5px;
 }
-
 
 .frame .text-wrapper-10 {
   color: #000000;
@@ -423,7 +384,6 @@ div.chat-background{background-color: rgb(0, 0, 255);}
   border-left: none;
   border-right: none;
   background-color: #000000;
-
 }
 
 .user1-message {
@@ -432,7 +392,7 @@ div.chat-background{background-color: rgb(0, 0, 255);}
 }
 
 .user2-message {
-  color: rgb(53, 217, 170)
+  color: rgb(53, 217, 170);
 }
 
 #form {
@@ -440,7 +400,7 @@ div.chat-background{background-color: rgb(0, 0, 255);}
 }
 
 #form-2 {
-  background-color: whitesmoke
+  background-color: whitesmoke;
 }
 
 #button1 {
@@ -486,7 +446,6 @@ form#form-2 {
   background-color: rgba(190, 224, 200, 0.031);
 }
 
-
 #text-wrapper-5-ac {
   -webkit-text-stroke: 1px #000000;
   color: #000000;
@@ -502,9 +461,7 @@ form#form-2 {
   height: 200px;
   width: 266px;
   margin-left: 60px;
-
 }
-
 
 .frame #id {
   background-color: red;
@@ -526,8 +483,6 @@ form#form-2 {
   border-top: none;
   border-left: none;
   border-right: none;
-
-  ;
 }
 
 /*  */
@@ -566,13 +521,12 @@ form#form-2 {
   border-top: none;
   border-left: none;
   border-right: none;
-  margin-top: 75px
+  margin-top: 75px;
 }
 
 #logo {
   width: 200px;
   margin-top: 300px;
-
 }
 
 #head {
@@ -587,28 +541,24 @@ form#form-2 {
   font-weight: 500;
   font-size: smaller;
   color: aqua;
-
 }
 
 #delete {
   height: 100px;
   width: 100px;
 
-
-
-  border: 2px solid
+  border: 2px solid;
 }
 
 #delete-account {
   height: 50px;
   width: 100px;
   margin-top: 300px;
-  border: 2px solid red
+  border: 2px solid red;
 }
 
 #ac {
   color: red;
-
 }
 
 #inner {
@@ -617,7 +567,7 @@ form#form-2 {
 
 #update {
   height: 20px;
-  width: 150px
+  width: 150px;
 }
 
 .frame .text-wrapper-20 {
@@ -639,9 +589,7 @@ form#form-2 {
   border-left: none;
   border-right: none;
   border-radius: 15px;
-
 }
-
 
 .milestones {
   height: 80px;
@@ -650,7 +598,6 @@ form#form-2 {
   background-color: rgb(26, 221, 19);
   margin-top: 40px;
 }
-
 
 .goals {
   height: 80px;
@@ -667,23 +614,15 @@ form#form-2 {
   margin-left: 90px;
   border-radius: 20px;
   background-color: white;
-  border: 2px solid rgb(0, 191, 255)
+  border: 2px solid rgb(0, 191, 255);
 }
 
 #feed {
   width: 70px;
   height: 80px;
   border-radius: 200px;
-  border: .05px solid
+  border: 0.05px solid;
 }
-
-
-
-
-
-
-
-
 
 .app {
   display: flex;
@@ -694,10 +633,12 @@ form#form-2 {
     "n n m m m "
     "n n m m m "
     "n n m m m ";
+
     padding-bottom: 60px;
    height: 100vh;
    width: 100vw;
    margin: 0;
+
 }
 
 .nav {
@@ -719,24 +660,20 @@ img#single-photo {
 
 } */
 
-
-#users{
-
+#users {
   text-align: center;
 }
-
 
 .graph {
   display: flex;
   align-items: flex-end;
-  width:100vw;
+  width: 100vw;
   align-items: center;
 
   height: 100px;
   background-color: #f2f2f2;
   /* padding: 10px; */
   border-radius: 20px;
-  
 }
 
 .bar {
@@ -754,7 +691,7 @@ img#single-photo {
   background: linear-gradient(to top, hsl(197, 100%, 50%), rgb(176, 255, 58));
   transition: height 0.5s ease;
   height: 40%;
-  animation: animateBar 1s 0.3s ease-in-out forwards
+  animation: animateBar 1s 0.3s ease-in-out forwards;
 }
 
 .bar3 {
@@ -779,7 +716,6 @@ img#single-photo {
   border-radius: 20px;
   display: grid;
 
-
   overflow: auto;
   text-align: center;
   /* margin-left: 350px; */
@@ -788,8 +724,6 @@ img#single-photo {
       grid-row-start: 3;
       grid-row-end: 3; */
   /* margin-bottom: 100px; */
-
-
 }
 
 .center {
@@ -802,7 +736,7 @@ img#single-photo {
   height: 100px;
 
   border-bottom: 2px solid black;
-  border-top: 2px solid #7ED957;
+  border-top: 2px solid #7ed957;
   background-color: white;
   font-size: larger;
   border-radius: 15px;
@@ -818,7 +752,6 @@ img#single-photo {
   border: 2px solid;
 } */
 #user {
-  
   border: 2px solid;
   margin: 0;
   width: 175px;
@@ -873,22 +806,17 @@ div#user.row {
 }
 
 .dashboard-container {
-
-
   display: flex;
-/* scroll-padding-block-start: 6; */
+  /* scroll-padding-block-start: 6; */
 
   /* float: left; */
 
   /* flex-direction: column; */
   /* justify-content: space-evenly; */
   /* justify-content: left; */
- 
-
 
   place-items: center;
   text-align: center;
-  
 
   /* grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr; */
@@ -897,7 +825,7 @@ div#user.row {
     ' m m m m'
     ' m m m m'
     ' f f f f'; */
-    /* margin: 0; */
+  /* margin: 0; */
   /* display: flex; */
   /* flex-direction: column; */
   /* justify-content: space-evenly; */
@@ -907,54 +835,43 @@ div#user.row {
   /* height: 100vh; */
   /* place-items: center; */
   /* text-align: center; */
-
 }
 
-.dashboard-container>header {
+.dashboard-container > header {
   width: 100%;
   grid-area: h;
-
-
 }
 
-.dashboard-container>button {
-
+.dashboard-container > button {
   grid-area: m;
   height: 50px;
   width: 300px;
   /* grid-row-start: 1; */
   border-radius: 15px;
-
-
-
-
 }
 
-.dashboard-container>footer {
+.dashboard-container > footer {
   grid-area: f;
   display: flex;
   flex-direction: column;
-
 }
 
 #dash-logo {
   /* background-color: red; */
-  width:400px;
+  width: 400px;
   height: 400px;
   /* background-image: url("./assets/GH_Nobg.png"); */
-  background-position:top;
+  background-position: top;
   border-radius: 15px;
   display: grid;
   /* opacity: 50%; */
   display: flex;
   flex-direction: column;
-  
+
   align-items: center;
- 
 
   justify-content: space-evenly;
   /* justify-content:center; */
-  
 }
 
 @media (max-width: 500px) {
@@ -970,67 +887,58 @@ div#user.row {
     /* place-items: center; */
     text-align: center;
     /* border: 2px solid var(--GHGreen); */
-
-
   }
 
-  .dashboard-container>header {
+  .dashboard-container > header {
     /* width: 100vh; */
     grid-area: h;
     margin-top: 0;
   }
 
-  .dashboard-container>button {
+  .dashboard-container > button {
     /* display: grid; */
     grid-area: m;
     height: 50px;
     /* width:300px; */
     /* grid-row-start: 1;
    */
-
-
-
   }
 
-  .dashboard-container>footer {
+  .dashboard-container > footer {
     grid-area: f;
   }
 
   /* nav.nav { */
-    /* display: none; */
-    /* margin-bottom: 0; */
+  /* display: none; */
+  /* margin-bottom: 0; */
 
   /* } */
-
 }
-button#feed{
+button#feed {
   border-radius: 15px;
   width: 200px;
   height: 100px;
-  background-color:var(--GHBlue
-  );
+  background-color: var(--GHBlue);
 }
-button#requests{
+button#requests {
   border-radius: 15px;
   width: 200px;
   height: 100px;
-  background-color:rgba(128, 128, 128, 0.999);
-  color:white
+  background-color: rgba(128, 128, 128, 0.999);
+  color: white;
 }
-button#active-goals{
+button#active-goals {
   border-radius: 15px;
   width: 200px;
   height: 100px;
   background-color: white;
- 
-  
 }
-button#feed:hover{
+button#feed:hover {
   background-color: var(--GHBlue);
   border-radius: 20px;
   padding: 5px;
 }
-#create-goal{
+#create-goal {
   background-color: var(--GHGreen);
   border-radius: 15px;
   width: 250px;
@@ -1122,8 +1030,6 @@ div.user {
   border: 2px solid var(--GHBlue);
   box-shadow: 0 0 10px rgb(0, 0, 0);
 
- 
-
   transition: transform 0.5s, box-shadow 0.5s;
 }
 
@@ -1157,20 +1063,18 @@ div.scroll2 {
   padding-bottom: 60px;
 } */
 
-
-.comment{border-radius: 15px;
-color: var(--GHBlue);
-background-color: var(--GHGreen);
+.comment {
+  border-radius: 15px;
+  color: var(--GHBlue);
+  background-color: var(--GHGreen);
 }
 
-#feed-logo{
-height: 100px;
-width: 150px;
+#feed-logo {
+  height: 100px;
+  width: 150px;
 }
 
-
-#current{
-
+#current {
   display: flex;
   flex-direction: column;
   padding-left: 30px;

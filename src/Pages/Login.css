@@ -1,21 +1,30 @@
-.login {
-  grid-area: m;
-  /* border: 1px solid green; */
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+@media (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .login {
+    /* border: 1px solid green; */
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+  }
 
-/* .login img { */
+  /* .login img { */
   /* height: 50px; */
   /* width: 20%; */
-/* } */
+  /* } */
 
-.login p {
-  align-self: flex-end;
-}
+  .login p {
+    align-self: flex-end;
+  }
 
-.form{
-  padding-top: 100%;
+  .form {
+    padding-top: 100%;
+  }
+
+  #login-logo {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
