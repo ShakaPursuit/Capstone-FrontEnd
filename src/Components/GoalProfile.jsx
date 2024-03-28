@@ -80,10 +80,10 @@
 //   const SwipeableComponent = () => {
 //     return (
 //       <div className="carousel" {...handlers}>
-//                 <div class="theader">
-//                   <i class="fa fa-cog" aria-hidden="true"></i>
-//                   <i class="fa fa-comments" aria-hidden="true"></i>
-//                   <div class="tlogo">
+//                 <div className="theader">
+//                   <i className="fa fa-cog" aria-hidden="true"></i>
+//                   <i className="fa fa-comments" aria-hidden="true"></i>
+//                   <div className="tlogo">
 //                     <img
 //                       src="src/assets/pf.png"
 //                       alt="Tinder Logo"
@@ -99,16 +99,16 @@
 //               key={index}
 //               {...handlers}
 //             >
-//               <div class="tbg">
-//                 <div class="tbgwrap">
-//                   <div class="tphoto">
+//               <div className="tbg">
+//                 <div className="tbgwrap">
+//                   <div className="tphoto">
 //                     <img
 //                       src={user.profile_img}
 //                       title="tphoto"
 //                       alt="Tinder Photo"
 //                     />
-//                     <div class="tname">
-//                       {user.username}, <span class="age">{user.age}</span>
+//                     <div className="tname">
+//                       {user.username}, <span className="age">{user.age}</span>
 //                       {goals
 //                         .filter((goal) => goal.goal_id === user.userprofile_id)
 //                         .map((goal, goalIndex) => (
@@ -123,16 +123,16 @@
 //                         ))}
 //                     </div>
 //                   </div>
-//                   <div class="tcontrols">
-//                     <div class="tno">
-//                       <i class="fa fa-times" aria-hidden="true"></i>
+//                   <div className="tcontrols">
+//                     <div className="tno">
+//                       <i className="fa fa-times" aria-hidden="true"></i>
 //                     </div>
-//                     <div class="tyes">
-//                       <i class="fa fa-heart" aria-hidden="true"></i>
+//                     <div className="tyes">
+//                       <i className="fa fa-heart" aria-hidden="true"></i>
 //                     </div>
 //                   </div>
 //                 </div>
-//                 <div class="credit">
+//                 <div className="credit">
 //                   <a href="http://themakery.jcink.net"></a>
 //                 </div>
 //               </div>
@@ -153,21 +153,28 @@
 //   );
 // };
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
-import { RiProfileLine } from "react-icons/ri";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { TiArrowSortedUp } from "react-icons/ti";
-import { GiStairsGoal } from "react-icons/gi";
 import "../Pages/GoalProfile.css";
 
 const GoalProfile = () => {
   const API = import.meta.env.VITE_BASE_URL;
   const [goals, setGoals] = useState([]);
   const [allusers, setAllUsers] = useState([]);
-  const [interest, setInterest] = useState([]);
+  const [interests, setInterest] = useState([]);
   const { id } = useParams();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [userSelect, setUserSelect] = useState("");
+const [filteredUsers, setFilteredUsers] = useState([])
+
+
+  const handleSelectChange = (event) => {
+    setUserSelect(event.target.value);
+  };
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -193,6 +200,7 @@ const GoalProfile = () => {
           throw new Error(`Request failed with status: ${response.status}`);
         }
         const data = await response.json();
+        console.log(data);
         setGoals(data);
       } catch (error) {
         console.error("Fetch error:", error);
@@ -210,6 +218,8 @@ const GoalProfile = () => {
         }
         const data = await response.json();
         setInterest(data);
+        console.log("Interest")
+        console.log(data)
       } catch (error) {
         console.error("Fetch error:", error);
       }
@@ -217,13 +227,33 @@ const GoalProfile = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const filteredUsers = allusers.filter(user => {
+      // If no interest is selected, return true to include all users
+      if (!userSelect) return true;
+
+      // Check if the user has the selected interest
+      return interests.some(interest => interest.interest_id === user.userprofile_id && interest.name === userSelect);
+    });
+
+    setFilteredUsers(filteredUsers);
+  }, [userSelect, interests, allusers]);
+
   const goToPreviousCard = () => {
+    if (allusers.length === 0) {
+      setCurrentIndex(0); // Reset to the first position
+      return;
+    }
     setCurrentIndex((prevIndex) =>
       prevIndex > 0 ? prevIndex - 1 : allusers.length - 1
     );
   };
-
+  
   const goToNextCard = () => {
+    if (allusers.length === 0) {
+      setCurrentIndex(0); // Reset to the first position
+      return;
+    }
     setCurrentIndex((prevIndex) =>
       prevIndex < allusers.length - 1 ? prevIndex + 1 : 0
     );
@@ -235,103 +265,97 @@ const GoalProfile = () => {
   });
 
   const SwipeableComponent = () => {
+    const hasUsers = filteredUsers.length > 0;
+
     return (
-      <div className="carousel" {...handlers}>
-        {allusers.map((user, index) => {
+      <div className="carousel" {...(hasUsers ? handlers : {})}>
+        {filteredUsers.map((user, index) => {
           const isCurrentCard = index === currentIndex;
           return (
             <div
               className={`user-card${isCurrentCard ? " active" : ""}`}
               key={index}
-              {...handlers}
+              {...(hasUsers ? handlers : {})}
             >
-               <div class="tbg">
-                <div class="tbgwrap">
+              <div className="tbg">
+                <div className="tbgwrap">
                   <TiArrowSortedUp className="uparrow" />
-                  <div class="tphoto">
+                    <Link to="/profiles/:user.userprofile_id">
+
+                  <div className="tphoto">
                     <img
                       src={user.profile_img}
                       title="tphoto"
                       alt="Tinder Photo"
-                    />
-                    <div class="tname">
-                      {user.username}, <span class="age">{user.age}</span>
+                      />
+                    <div className="tname">
+                      <h1>{user.username}</h1>{" "}
+                      <span className="age">
+                        <h3>Age: {user.age}</h3>
+                      </span>
                       {goals
                         .filter((goal) => goal.goal_id === user.userprofile_id)
                         .map((goal, goalIndex) => (
-                          <p key={goalIndex}>〉{goal.description}</p>
-                        ))}
-                      {interest
+                          <p key={goalIndex}> Goal: {goal.description}</p>
+                          ))}
+                      {interests
                         .filter(
-                          (goal) => goal.interest_id === user.userprofile_id
-                        )
-                        .map((goal, goalIndex) => (
-                          <p key={goalIndex}>〉{goal.name}</p>
-                        ))}
-                      <RiProfileLine
-                        style={{
-                          color: `blue`,
-                          width: `100px`,
-                        }}
-                        id="profile"
-                      />
-                      <button type="button">Accept Me</button>
+                          (interest) =>
+                          interest.interest_id === user.userprofile_id
+                          )
+                          .map((interest, interestIndex) => (
+                            <p key={interestIndex}> Interest: {interest.name}</p>
+                            ))}
                     </div>
                   </div>
-                  <div class="tcontrols">
-                    <div class="tno">
-                      <i class="fa fa-times" aria-hidden="true"></i>
+                            </Link>
+                  <div className="tcontrols">
+                    <div className="tno">
+                      <i className="fa fa-times" aria-hidden="true"></i>
                     </div>
                     <TiArrowSortedDown className="downarrow" />
-                    <div class="tyes">
-                      <i class="fa fa-heart" aria-hidden="true"></i>
+                    <div className="tyes">
+                      <i className="fa fa-heart" aria-hidden="true"></i>
                     </div>
                   </div>
                 </div>
-                <div class="credit">
+                <div className="credit">
                   <a href="http://themakery.jcink.net"></a>
                 </div>
-              </div> 
+              </div>
             </div>
           );
         })}
       </div>
     );
   };
-
+  
   return (
     <>
       <div className="carousel-container">
         <h1>Find a Buddy</h1>
         <form>
-            <label>Search by Interest</label>
-          <GiStairsGoal className="goalstairs" style={{size: "medium"}}></GiStairsGoal>
-<select>      
-<option value="">Please select an interest
-</option>
-<option value="Tech"> Tech
-</option>
-<option value="Hiking">Hiking
-</option>
-<option value="Photography">Photography
-</option>
-<option value="Gardening">Gardening
-</option>
-<option value="Traveling">Traveling
-</option>
-<option value="Health">Health
-</option>
-<option value="Fitness">Fitness
-</option>
-<option value="Finance">Finance
-</option>
-<option value="Crypto">Crypto
-</option>
-<option value="Art">Art
-</option>
-<option value="Music">Music
-</option>
-</select>
+          <label>Search by Interest</label>
+          <select
+            className="select"
+            name="interests"
+            onChange={handleSelectChange}
+            value={userSelect}
+            >
+            <option value="">Please select an interest</option>
+            <option value="Tech"> Tech</option>
+            <option value="Hiking">Hiking</option>
+            <option value="Photography">Photography</option>
+            <option value="Gardening">Gardening</option>
+            <option value="Traveling">Traveling</option>
+            <option value="Health">Health</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Finance">Finance</option>
+            <option value="Crypto">Crypto</option>
+            <option value="Art">Art</option>
+            <option value="Music">Music</option>
+            
+          </select>
         </form>
         <SwipeableComponent />
       </div>

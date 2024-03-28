@@ -72,7 +72,7 @@ function App() {
           {/* <Route path="/findbuddy" element={<FindBuddy />} /> */}
           <Route path="/accountsettings" element={<AccountSettings />} />
           <Route
-            path="/userProfile"
+            path="/profiles/:id"
             element={
               <ProtectedRoute
                 element={UserProfile}
