@@ -78,8 +78,8 @@ const Feed = () => {
   return (
     <>
       <div className="scroll2">
-      <div class="bee-container">
-  <img id="feed-logo"src="/GH_Logo.png" alt="Bee" class="bee" />
+      <div className="bee-container">
+  <img id="feed-logo"src="/GH_Logo.png" alt="Bee" className="bee" />
 </div>
    <h1>Community Feed</h1>
         {users.map((user, index) => {

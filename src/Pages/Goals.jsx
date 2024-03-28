@@ -8,12 +8,10 @@ const Goals = ({ user, token }) => {
   const [goals, setGoals] = useState([]);
   const [err, setError] = useState("");
 
-  
-
   // console.log("The user obj", user);
 
   const fetchData = () => {
-    fetch(`${API}/allgoals`, {
+    fetch(`${API}/profiles/${user.userprofile_id}/goals`, {
       headers: {
         Authorization: token,
       },
